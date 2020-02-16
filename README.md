@@ -1,4 +1,4 @@
-# Photometry Pipeline
+# A Photometry Pipeline in IDL
 
 ## Table of contents
 1. [Introduction](#intro)
