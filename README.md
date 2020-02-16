@@ -376,4 +376,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
 ![pgc055_PS_panstarrs_profile](https://user-images.githubusercontent.com/13570487/74598770-c7460e00-5034-11ea-904e-03c672b1628b.jpg)
 
 
-
+   - - - -
+   
+ * All rights reserved. The material may not be reproduced or distributed, in whole or in part, without the prior agreement
+ * Contact: Ehsan Kourkchi <ekourkchi@gmail.com>
