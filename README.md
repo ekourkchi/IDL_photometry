@@ -1,6 +1,8 @@
 ## Photometry Pipeline
 
 
+http://svn.pan-starrs.ifa.hawaii.edu/trac/ipp/wiki/glga_manual
+
 ![stv_preview2](https://user-images.githubusercontent.com/13570487/74598526-42f18c00-5030-11ea-84a8-50dcf856ec23.jpg)
 
 
@@ -296,8 +298,16 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
  5) Close all
    * Closes all open ds9 windows
    * be careful this would close all ds9 windows, not necessarily those opened by GLGA TV
+ 6) On the left tool-bar, click on the ds(9) button. This would open up the galaxy image in ds9. Then click on the "Contours On" button, which turns-on the contours on the *ds9* window. Also you can turn on/off contour using ds9 menu-bar under `Analysis`.
 
+![unnamed](https://user-images.githubusercontent.com/13570487/74598847-4ee04c80-5036-11ea-91f1-98d887b6c80f.png)
+
+
+ 7) Another *ds9*-related window also pops out. This helps you to change the number of contours. You can also decide how much to smooth the image before finding isophots.
  
+![unnamed (1)](https://user-images.githubusercontent.com/13570487/74598841-3c661300-5036-11ea-90af-f5fcd0679a7c.png)
+
+  
 ### SExtractor
 
  1) Run
