@@ -346,7 +346,8 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
 
 ## OUTPUTS
 
-[[Image(pgc055_PS_panstarrs_images.jpg)]]
+![pgc055_PS_panstarrs_images](https://user-images.githubusercontent.com/13570487/74598760-ac739980-5034-11ea-810e-98d1a3fa4cf8.jpg)
+
 
  * Images have this format: <ID>_<survey>_images.<pdf/jpg>
  * Bad pixels would be displayed in red in output images. 
@@ -354,13 +355,15 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
  * Pan-STARRS images already include bad pixels (NaN value)
  * The common-mask that is used for all bands are displayed over the composite image, in orange.
 
-[[Image(pgc055_PS_panstarrs_images_masks.jpg)]]
+![pgc055_PS_panstarrs_images_masks](https://user-images.githubusercontent.com/13570487/74598764-b7c6c500-5034-11ea-8961-acf53f3db09b.jpg)
+
 
  * The band mask image has this format: <ID>_<survey>_images_mask.<pdf/jpg>
  * If there is any band-mask designed, this would be generated. Otherwise, there would not be such file.
  * Bad pixels are in red
  * Band-masks are displayed in green
 
-[[Image(pgc055_PS_panstarrs_profile.jpg)]]
+![pgc055_PS_panstarrs_profile](https://user-images.githubusercontent.com/13570487/74598770-c7460e00-5034-11ea-904e-03c672b1628b.jpg)
 
- * The profile image has this format: <ID>_<survey>_profile.<pdf/jpg>
+
+
