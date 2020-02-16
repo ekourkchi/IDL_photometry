@@ -97,7 +97,7 @@ To remove all binary files in the *bin* folder, you can use the following comman
  * using `ds9` to open all fits images of the same object inside the TV
  * using `SExtracto`r to fit the ellipse to the galaxy
  * using `Pylipse`, a python program to manually fit an ellipse over the galaxy
- * Pylipse also interacts with ds9. ds9 can be used as a bridge to transfer ellipse parameters between GLGA TV and Pylipse
+ * Pylipse also interacts with *ds9*. *ds9* can be used as a bridge to transfer ellipse parameters between GLGA TV and Pylipse
 
 
 
@@ -172,17 +172,17 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
 ![stv_pylipse](https://user-images.githubusercontent.com/13570487/74598710-8ac5e280-5033-11ea-9f4e-9fdbe0d51f93.jpeg)
 
 
- 10: ds9: Opens the fits file of the displayed image in the TV. If not band has been specified (in case of using the composite image), the use-file ('r' band for /sdss and /panstarrs) would be opened. In ds9, one can play around with the *red* elliptical aperture, (e.g. re-center it, or resize it). The parameter of this *red* aperture can be later on captured by GLGA TV and update the ellipse 
+ 10: *ds9*: Opens the fits file of the displayed image in the TV. If not band has been specified (in case of using the composite image), the use-file ('r' band for /sdss and /panstarrs) would be opened. In *ds9*, one can play around with the *red* elliptical aperture, (e.g. re-center it, or resize it). The parameter of this *red* aperture can be later on captured by GLGA TV and update the ellipse 
 
- 11: Contours On/Off: If ds9 is open, then isophots can be displayed. This helps to locate a proper border around the galaxy. To rotate the *red* aperture, first select it by clicking inside it on ds9. You see four selection points around it. Press Shift-key on keyboard and choose one of the four point to rotate the ellipse by dragging the mouse. To move the ellipse, click and drag ...
+ 11: Contours On/Off: If *ds9* is open, then isophots can be displayed. This helps to locate a proper border around the galaxy. To rotate the *red* aperture, first select it by clicking inside it on *ds9*. You see four selection points around it. Press Shift-key on keyboard and choose one of the four point to rotate the ellipse by dragging the mouse. To move the ellipse, click and drag ...
 
 ![ds9_demo](https://user-images.githubusercontent.com/13570487/74598716-99ac9500-5033-11ea-8d55-651fb1c30617.jpeg)
 
 
- 12: Import Ellipse: To import the *red* aperture from ds9 to the TV (when ds9 is open). All ellipse information would be updated and be used for the measurement. Note: ds9 can also be used a bridge between Pylipes (i.e. the python code to modify the ellipse) and GLGA TV. However, Saving (in Pylipse) and loading (in TV: `Menu > Pyliupse > Load Ellipse`) is a way to import from Pylipse to GLGA TV.
+ 12: Import Ellipse: To import the *red* aperture from *ds9* to the TV (when *ds9* is open). All ellipse information would be updated and be used for the measurement. Note: *ds9* can also be used a bridge between Pylipes (i.e. the python code to modify the ellipse) and GLGA TV. However, Saving (in Pylipse) and loading (in TV: `Menu > Pyliupse > Load Ellipse`) is a way to import from Pylipse to GLGA TV.
 
 
- 13: Export Ellipse: To update the ellipse in ds9 when it's open. If you have already opened ds9, but you have edited the ellipse in the TV, use this action to export the TV ellipse to ds9. Note: ds9 can also be used a bridge between Pylipes (i.e. the python code to modify the ellipse) and GLGA TV. To export an ellipse from TV to Pylipse, you can re-open Pylipse (in `TV: Menu > Pylipse > Open`)
+ 13: Export Ellipse: To update the ellipse in *ds9* when it's open. If you have already opened *ds9*, but you have edited the ellipse in the TV, use this action to export the TV ellipse to *ds9*. Note: *ds9* can also be used a bridge between Pylipes (i.e. the python code to modify the ellipse) and GLGA TV. To export an ellipse from TV to Pylipse, you can re-open Pylipse (in `TV: Menu > Pylipse > Open`)
 
  14: Run *SExtractor*: Running *SExtractor* to update the ellipse information. If *SExtractor* has been already run and the information exists in the data-base, the GUI asks whether to use the previous results, or run *SExtractor* again. Note: one can run *SExtractor* automatically for the entire data-base, and if there is any adjustment needed, it is possible to re-run it in the TV. In this case, TV first creates a temporary masked image (applying both band-mask and common-mask files) and then runs *SExtractor*. This way one can take care of any foreground/background problems that could have been already resolved. Also there are other masking options just to run *SExtractor* (see: `menu > SExtractor`)
 
@@ -191,8 +191,6 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
  16: Original Ellipse: Use the original ellipse paramter and update the TV
 
  17: Refresh TV: To reload the image and all masks. For larger galaxies, reloading takes time, but it helps to see the color of the masks (in case of having both Magenta and Green masks)
-
-![stv_note_flag](https://user-images.githubusercontent.com/13570487/74598719-a8934780-5033-11ea-9366-e12836c5665a.jpeg)
 
  18: quit-next: quit the GLGA TV and save the flags and note about the image. You can simply use the pop-up window which is synchronized with terminal. You can also use the short keys suggested in terminal. If you happen to close the pop-up window, don't worry, you can still follow-up with terminal in old-fashion. To prevent users to accidentally mess around with the important TV parameters (e.g. masks, ellipse etc.), all unnecessary actions on the control-panel would remain deactivated unless this process is cancelled. Please don't use the menu-bar when you are in the middle of quitting process. Updated ellipse parameter would be saved. 
 
@@ -262,6 +260,22 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * Updates the ellipse info. and switched back to the original ellipse
    * Refresh the TV
 
+ 3) Also to edit the ellipse in GLGA, you can click on the `Edit Ellipse (e)` button. Then you need to look at the console you ran IDL form. You should not activate the console (by clicking on it), unless it asks you to enter a number.
+ 
+![unnamed (4)](https://user-images.githubusercontent.com/13570487/74598994-a1226d00-5038-11ea-9c5c-65c9e2bee8c9.png)
+
+ 4) re-size, press % on your keyboard when the GLGA window is still activated. If not, click on its title bar.
+ 
+ 5) Then enter how much in percent you would like to change the size. Note this number can be less than or larger than 100.
+ 
+ 6) Once you are happy with the size, press 'q' on the TV. This de-activates the "Edit Ellipse" mode.
+ 
+ 7) When "Edit Ellipse" is still activated, you can press '<' or '>' on your keyboard. This changes the position angle of the ellipse.
+ 
+ 8) Pressing 'h' gives you a complete help of all options in this mode.
+ 
+ 9) `Edit Ellipse` is harder to work with and it is not recommended. As explained above, the best way to edit the ellipse is through communicating with *ds9*.
+ 
 ### Stars
  1) Find ...
    * Find new point sources based on the entered PSF and limiting magnitudes
@@ -287,18 +301,18 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
 ### ds9
 
  1) Open
-   * Opens the fits imaged of the current TV band on ds9
+   * Opens the fits imaged of the current TV band on *ds9*
    * If TV is in the composite image mode, the main fits file (use-file) would be used
  2) Contours on/off
-   * turning on/off the contours on the ds9 image
+   * turning on/off the contours on the *ds9* image
  3) Import ellipse
-   * Imports the red elliptical aperture from ds9 to TV
+   * Imports the red elliptical aperture from *ds9* to TV
  4) Export ellipse
-   * Exports the current ellipse from TV to ds9
+   * Exports the current ellipse from TV to *ds9*
  5) Close all
-   * Closes all open ds9 windows
-   * be careful this would close all ds9 windows, not necessarily those opened by GLGA TV
- 6) On the left tool-bar, click on the ds(9) button. This would open up the galaxy image in ds9. Then click on the "Contours On" button, which turns-on the contours on the *ds9* window. Also you can turn on/off contour using ds9 menu-bar under `Analysis`.
+   * Closes all open *ds9* windows
+   * be careful this would close all *ds9* windows, not necessarily those opened by GLGA TV
+ 6) On the left tool-bar, click on the ds(9) button. This would open up the galaxy image in *ds9*. Then click on the "Contours On" button, which turns-on the contours on the *ds9* window. Also you can turn on/off contour using *ds9* menu-bar under `Analysis`.
 
 ![unnamed](https://user-images.githubusercontent.com/13570487/74598847-4ee04c80-5036-11ea-91f1-98d887b6c80f.png)
 
@@ -307,7 +321,27 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
  
 ![unnamed (1)](https://user-images.githubusercontent.com/13570487/74598841-3c661300-5036-11ea-90af-f5fcd0679a7c.png)
 
-  
+ 8) Please note that, every time you change Levels and Smoothness, you need to first click on the `Generate` button followed by a click on the `Apply` button. The task is to find the rough shape of the ellipse. Then you need to move and rotate the red ellipse in order to match with what you see. Sometimes, this is not very straightforward, since galaxies are not completely elliptical. If the dashed sky-blue ellipse are annoying in this task, you can select them and delete them by pressing `Delete` key on you keyboard.
+ 
+   * How to choose an ellipse on *ds9*: click inside the ellipse
+   * How to move it: Click inside the ellipse and drag your mouse.
+   * How to re-size it: Once an ellipse is selected, four points are displayed. click on them and drag your mouse.
+   * How to rotate it: This process is the same as resizing, just press the shift key when you drag your mouse pointer.
+
+ 9) Once you are happy with the ellipse in *ds9*, you need to import it into the GLGA TV. Click on `Import Ellipse (*)` button.
+ 
+![unnamed (2)](https://user-images.githubusercontent.com/13570487/74598964-36713180-5038-11ea-9b48-2c0861751807.png)
+
+ 10) On *ds9*, dragging your mouse pointer while pressing the right mouse button, you can change the image scale. This helps to see different details in the image. Be careful that the ellipse you choose, should match the visual image of the galaxy. If you see that the internal ellipse are twisted or do not have the same axis, just try to fit the ellipse with the isophots that describe the overall shape of the ellipse. We might have to compromise a little bit.
+ 
+ 11) On *ds9*, dragging your mouse pointer while pressing the right mouse button, you can change the image scale. This helps to see different details in the image. Be careful that the ellipse you choose, should match the visual image of the galaxy. If you see that the internal ellipse are twisted or do not have the same axis, just try to fit the ellipse with the isophots that describe the overall shape of the ellipse. We might have to compromise a little bit.
+
+ 12) When you are happy with imported ellipse in GLGA, you can move decrease or increase its size easily by clicking on `+/- sings`. These increase/crease the size by 10%.
+
+![unnamed (3)](https://user-images.githubusercontent.com/13570487/74598983-789a7300-5038-11ea-9d32-9ba149ba683f.png)
+
+
+
 ### SExtractor
 
  1) Run
@@ -322,10 +356,10 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
  3) Masked Image
    * This would display the temporary masked region that has been already used in this session
  4) Region on
-   * This would turn on all the fitted ellipses by *SExtractor*. To see them, you need to open ds9
-   * Segmentation, Maksed Image, TV Image can be used in ds9 to see these regions
+   * This would turn on all the fitted ellipses by *SExtractor*. To see them, you need to open *ds9*
+   * Segmentation, Maksed Image, TV Image can be used in *ds9* to see these regions
  5) Region off
-   * This would turn off all regions previously openned in all ds9 windows
+   * This would turn off all regions previously openned in all *ds9* windows
  6) Use-Mask
    * User can define a regions to be specifically used by *SExtractor* in this session
    * When TV starts, all previous *SExtractor* regions would be deleted, so this region is only valid in the current session
@@ -346,12 +380,37 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * Opens Pylipse, a python program
    * There is a complete help on how to use this program
    * This can also be used stand-alone
-   * ds9 can be used as a bridge to import/export ellipse to/from this program
+   * *ds9* can be used as a bridge to import/export ellipse to/from this program
    * To export an ellipse from TV to Pylipse, you can re-open Pylipse (Menu > Pylipse > Open)
 
 
  2) Load Ellipse
    * Saving (in Pylipse) and loading (Menu > Pyliupse > Load Ellipse) is a way to transfer ellipse from Pylipse to GLGA TV
+
+## How to start the photometry
+
+   * Suppose you are happy with all the mask and the elliptical apertures. To run the photometry click on this button
+
+![unnamed (5)](https://user-images.githubusercontent.com/13570487/74599037-15f5a700-5039-11ea-9dc0-8d54a0018344.png)
+
+   * This close all the GLGA windows and runs the photometry automatically.
+   * Then GLGLA windows pop out. You will also see the image of the galaxy in different bands, as well as the surface brightness profiles.
+   * You can then repeat the process until you are happy with the profiles you see.
+
+## How to exit the program:
+
+ 1) `Quit` --> exits the program. No change would be saved.
+ 2) `quit-next` --> Saves the photometry you just did, as well as all the information regarding to mask etc, and then it moves on to the next galaxy in the list. If you are done with the current galaxy, please check "Finished" option.
+ 3) These are the options you can choose before moving on to the next galaxy
+ 
+   * Finished: You are done
+   * Uncertain: You are uncertain about the results. The image is noisy or whatever reason you'd like to write about in "QA note" text box.
+   * FOV: If the galaxy is larger than the Field Of View of the image you saw in the GLGA TV.
+   * Multiple: If you see multiple galaxies next to each other, inside the aperture, such a way you cannot mask out one of the them and perform the photometry for the desired galaxy. Sometimes the multiple galaxy faint outskirts can influence each other. Even by masking the visual parts of one galaxy we are not sure if the faint outskirt is still shedding light on the neighbor galaxy.
+   * Bright-star: If there is a bright star in the field that dominate some parts or the entire image. you do the best job to mask out every details, however at the end you are not sure if there is any remaining light (gradients).
+   * *Note:* Please write about everything weird you see on the image inside the `QA Note box`. This helps the others to assess the problem easier. 
+
+![unnamed (6)](https://user-images.githubusercontent.com/13570487/74599080-acc26380-5039-11ea-8b6b-c22a5babfb0f.png)
 
 
 ## OUTPUTS
