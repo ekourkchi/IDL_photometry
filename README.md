@@ -1,35 +1,10 @@
-# IDL_photometry
-
-Skip to content
- 
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@ekourkchi 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-ekourkchi
-/
-IDL_photometry
-1
-00
- Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security Insights Settings
-IDL_photometry/glgapro/documents/README.wiki.txt
-@ekourkchi ekourkchi pipeline codes
-350d187 1 minute ago
-Executable File  367 lines (277 sloc)  20.4 KB
- 
 [[PageOutline]]
 
 
-[[Image(stv_preview2.jpg, 70%)]]
+![stv_preview2](https://user-images.githubusercontent.com/13570487/74598526-42f18c00-5030-11ea-84a8-50dcf856ec23.jpg =250x)
 
-= SETUP =
+
+## SETUP 
 
 Before launching the program in IDL:
 
@@ -391,16 +366,3 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
 [[Image(pgc055_PS_panstarrs_profile.jpg)]]
 
  * The profile image has this format: <ID>_<survey>_profile.<pdf/jpg>
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-
