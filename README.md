@@ -121,11 +121,11 @@ To remove all binary files in the *bin* folder, you can use the following comman
   * dotted yellow ellipses: The annulus that is not used for background estimations (when background regions are in use)
   * orange circles: Already Masked point sources
   * green circles: new selected point sources
-  * [[span(style=color: #43BFC7	, '''Thick dashed sky blue open regions''' )]]: These are the optional regions to measure the background value. When they are defined, the elliptical annulus turns into yellow. 
-  * [[span(style=color: #E2A76F	, '''Dash-dotted peach-color open region''' )]]: If defined '(menu > SExtractor > Use-Mask)', SExtractor only uses this area for measurements. It is useful when half of the image is missing and only the area around the galaxy is useful.
-  * [[span(style=color: #4AA02C	, '''Dash-dotted green open region''' )]]: If defined '(menu > SExtractor > Force-Mask)', SExtractor does not filter this area for measurements. It is useful for instance when a masked spike divides a galaxy into two halves. We do not want SExtractor fits a separate ellipse for each half.
-  * [[span(style=color: #008000, '''Green filled regions''' )]]: these are the masks used for all bands (i.e. common-masks)  
-  * [[span(style=color: #FF00FF	, '''Magenta  filled regions''' )]]: these are the masks used for each individual mask (i.e. band-masks)  
+  * *Thick dashed sky blue open regions*: These are the optional regions to measure the background value. When they are defined, the elliptical annulus turns into yellow. 
+  * *Dash-dotted peach-color open region*: If defined `(Menu > SExtractor > Use-Mask)`, SExtractor only uses this area for measurements. It is useful when half of the image is missing and only the area around the galaxy is useful.
+  * *Dash-dotted green open region*: If defined `(Menu > SExtractor > Force-Mask)`, SExtractor does not filter this area for measurements. It is useful for instance when a masked spike divides a galaxy into two halves. We do not want SExtractor fits a separate ellipse for each half.
+  * *Green filled regions*: these are the masks used for all bands (i.e. common-masks)
+  * *Magenta  filled regions*: these are the masks used for each individual mask (i.e. band-masks)
 
  * **Notes:**
   * Background estimation regions are always blue
@@ -167,19 +167,20 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
  9: Edit/Add Centeroid: Changing the size of the centeroids, turning them off or adding new ones. All inputs are taken from the terminal
 
 
-[[Image(stv_pylipse.jpeg, 60%)]]
+![stv_pylipse](https://user-images.githubusercontent.com/13570487/74598710-8ac5e280-5033-11ea-9f4e-9fdbe0d51f93.jpeg)
 
 
- 10: ds9: Opens the fits file of the displayed image in the TV. If not band has been specified (in case of using the composite image), the use-file ('r' band for /sdss and /panstarrs) would be opened. In ds9, one can play around with the [[span(style=color: #FF0000,  red )]] elliptical aperture, (e.g. re-center it, or resize it). The parameter of this [[span(style=color: #FF0000,  red )]] aperture can be later on captured by GLGA TV and update the ellipse 
+ 10: ds9: Opens the fits file of the displayed image in the TV. If not band has been specified (in case of using the composite image), the use-file ('r' band for /sdss and /panstarrs) would be opened. In ds9, one can play around with the *red* elliptical aperture, (e.g. re-center it, or resize it). The parameter of this *red* aperture can be later on captured by GLGA TV and update the ellipse 
 
- 11: Contours On/Off: If ds9 is open, then isophots can be displayed. This helps to locate a proper border around the galaxy. To rotate the [[span(style=color: #FF0000,  red )]] aperture, first select it by clicking inside it on ds9. You see four selection points around it. Press Shift-key on keyboard and choose one of the four point to rotate the ellipse by dragging the mouse. To move the ellipse, click and drag ...
+ 11: Contours On/Off: If ds9 is open, then isophots can be displayed. This helps to locate a proper border around the galaxy. To rotate the *red* aperture, first select it by clicking inside it on ds9. You see four selection points around it. Press Shift-key on keyboard and choose one of the four point to rotate the ellipse by dragging the mouse. To move the ellipse, click and drag ...
 
-[[Image(ds9_demo.jpeg, 30%)]]
-
- 12: Import Ellipse: To import the [[span(style=color: #FF0000,  red )]] aperture from ds9 to the TV (when ds9 is open). All ellipse information would be updated and be used for the measurement. Note: ds9 can also be used a bridge between Pylipes (i.e. the python code to modify the ellipse) and GLGA TV. However, Saving (in Pylipse) and loading (in TV: Menu > Pyliupse > Load Ellipse) is a way to import from Pylipse to GLGA TV.
+![ds9_demo](https://user-images.githubusercontent.com/13570487/74598716-99ac9500-5033-11ea-8d55-651fb1c30617.jpeg)
 
 
- 13: Export Ellipse: To update the ellipse in ds9 when it's open. If you have already opened ds9, but you have edited the ellipse in the TV, use this action to export the TV ellipse to ds9. Note: ds9 can also be used a bridge between Pylipes (i.e. the python code to modify the ellipse) and GLGA TV. To export an ellipse from TV to Pylipse, you can re-open Pylipse (in TV: Menu > Pylipse > Open)
+ 12: Import Ellipse: To import the *red* aperture from ds9 to the TV (when ds9 is open). All ellipse information would be updated and be used for the measurement. Note: ds9 can also be used a bridge between Pylipes (i.e. the python code to modify the ellipse) and GLGA TV. However, Saving (in Pylipse) and loading (in TV: `Menu > Pyliupse > Load Ellipse`) is a way to import from Pylipse to GLGA TV.
+
+
+ 13: Export Ellipse: To update the ellipse in ds9 when it's open. If you have already opened ds9, but you have edited the ellipse in the TV, use this action to export the TV ellipse to ds9. Note: ds9 can also be used a bridge between Pylipes (i.e. the python code to modify the ellipse) and GLGA TV. To export an ellipse from TV to Pylipse, you can re-open Pylipse (in `TV: Menu > Pylipse > Open`)
 
  14: Run SExtractor: Running SExtractor to update the ellipse information. If SExtractor has been already run and the information exists in the data-base, the GUI asks whether to use the previous results, or run SExtractor again. Note: one can run SExtractor automatically for the entire data-base, and if there is any adjustment needed, it is possible to re-run it in the TV. In this case, TV first creates a temporary masked image (applying both band-mask and common-mask files) and then runs SExtractor. This way one can take care of any foreground/background problems that could have been already resolved. Also there are other masking options just to run SExtractor (see: menu > SExtractor)
 
@@ -189,7 +190,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
 
  17: Refresh TV: To reload the image and all masks. For larger galaxies, reloading takes time, but it helps to see the color of the masks (in case of having both Magenta and Green masks)
 
-[[Image(stv_note_flag.jpeg, 40%)]]
+![stv_note_flag](https://user-images.githubusercontent.com/13570487/74598719-a8934780-5033-11ea-9366-e12836c5665a.jpeg)
 
  18: quit-next: quit the GLGA TV and save the flags and note about the image. You can simply use the pop-up window which is synchronized with terminal. You can also use the short keys suggested in terminal. If you happen to close the pop-up window, don't worry, you can still follow-up with terminal in old-fashion. To prevent users to accidentally mess around with the important TV parameters (e.g. masks, ellipse etc.), all unnecessary actions on the control-panel would remain deactivated unless this process is cancelled. Please don't use the menu-bar when you are in the middle of quitting process. Updated ellipse parameter would be saved. 
 
@@ -226,7 +227,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * ask user if he/she wants to save the newly added regions
 
 
-=== Region ===
+### Region
 
  a. Undo
    * Remove the last added region  
@@ -250,7 +251,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * It is effective when a particular band is chosen
 
 
-=== Ellipse ===
+### Ellipse
  a. Edit ...
    * Edit ellipse information
    * Look at terminal for the effective short key 
@@ -259,7 +260,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * Updates the ellipse info. and switched back to the original ellipse
    * Refresh the TV
 
-=== Stars === 
+### Stars
  a. Find ...
    * Find new point sources based on the entered PSF and limiting magnitudes
    * Use terminal to enter the input variables
@@ -273,7 +274,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * Edit the existing point sources, e.g. increase/decrease their sizes
 
 
-=== Background === 
+### Background 
  a. Back. Region
    * Defining regions to measure the background
    * When using these regions, the elliptical annulus would no longer be used
@@ -281,7 +282,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * Clean the previously defined background regions and go back to the annulus background estimation
 
 
-=== ds9 ===
+### ds9
  a. Open
    * Opens the fits imaged of the current TV band on ds9
    * If TV is in the composite image mode, the main fits file (use-file) would be used
@@ -296,7 +297,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * be careful this would close all ds9 windows, not necessarily those opened by GLGA TV
 
  
-=== SExtractor === 
+### SExtractor
  a. Run
    * Run SEWxtractor on the fits images of the current band
    * If TV is in the composite image mode, the main fits file (use-file) would be used
@@ -327,7 +328,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * If you don't clear these masks, they would be removed on the next run, because users are expected to run SExtractor only a few times to find the proper ellipse
    * Once a good ellipse is found, no more messing up with its parameters
 
-=== Pylipse === 
+### Pylipse
  a. Open
    * Opens Pylipse, a python program
    * There is a complete help on how to use this program
@@ -340,13 +341,13 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * Saving (in Pylipse) and loading (Menu > Pyliupse > Load Ellipse) is a way to transfer ellipse from Pylipse to GLGA TV
 
 
-=== Help === 
+### Help 
  * The URL to this page ... :)
 
 
 
 
-= OUTPUTS =
+## OUTPUTS
 
 [[Image(pgc055_PS_panstarrs_images.jpg)]]
 
