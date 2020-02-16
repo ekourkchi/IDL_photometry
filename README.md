@@ -410,9 +410,33 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * Bright-star: If there is a bright star in the field that dominate some parts or the entire image. you do the best job to mask out every details, however at the end you are not sure if there is any remaining light (gradients).
    * *Note:* Please write about everything weird you see on the image inside the `QA Note box`. This helps the others to assess the problem easier. 
 
-![unnamed (6)](https://user-images.githubusercontent.com/13570487/74599080-acc26380-5039-11ea-8b6b-c22a5babfb0f.png)
+![unnamed (6)](https://user-images.githubusercontent.com/13570487/74599113-425df300-503a-11ea-8c29-048d7600eea9.png)
 
+ 4) In the above flag window, the options are:
+   * Disturbed and/or distorted (confused)           
+   * Has tail or trail: Sometimes you see very faint gaseous tail/trail coming out of the galaxy
+   * NOT a Spiral Galaxy: Most of the galaxy we are dealing with are supposed to spiral galaxies. But if you happen to see any elliptical galaxy, you can report it here.
+   * Face-on Galaxy: If you fit a circular aperture, or the galaxy seems to be too face-on to be good for TF distance measurement  
+   * Too Faint: If the galaxy is too faint and makes it hard to fit ellipses, determining inclinations, or doing photometry
+   * Crowded Field: If the field is overcrowded by stars
+   * Needed a lot of Masking: Having tons of masks. 
 
+ 5) Please look at the other flag specific to each band. We are only interested in only *g/r/i-*bands. This means that no worried if you could not get the photometry of *u* and *z*-bands right. Please use specific band flags if required:
+
+   * edge (not applicable)
+   * sn grad: If you see any gradient in the background. Either signal to noise or background level, if this gradient should have influenced the galaxy aperture.
+   * artifact
+   * missing: I'm trying my best to provide all g/r/i-band images. If something is missing report it here
+   * other: if you have other concerns (put a note for it)
+
+   
+## Misslenous points
+
+ 1) If you see blue stars (and big stars) in general, don't only rely on the automatic psf-based masks (the orange/blue circular shapes). These stars are bigger than what you see, therefore add another manual mask around them 
+
+![unnamed (8)](https://user-images.githubusercontent.com/13570487/74599145-c44e1c00-503a-11ea-9598-1e3e7ac590a7.png)
+
+ 
 ## OUTPUTS
 
 ![pgc055_PS_panstarrs_images](https://user-images.githubusercontent.com/13570487/74598760-ac739980-5034-11ea-810e-98d1a3fa4cf8.jpg)
