@@ -74,21 +74,21 @@ This is what you may have in "*glgapro*" folder:
             $ make all
 
 
-You need to have '''cfitsio''' installed before running making binary files. `cfitsio` is a C libaray to interact with fits files in C/C++ programs.
+You need to have **cfitsio** installed before running making binary files. `cfitsio` is a C libaray to interact with fits files in C/C++ programs.
 
-To remove all binary files in the ''bin'' folder, you can use the following command. Be advised, this removes everything in ''bin'' folder. Please use it wisely.
-{{{
-$ make clean
-}}}
+To remove all binary files in the *bin* folder, you can use the following command. Be advised, this removes everything in *bin* folder. Please use it wisely.
 
+            $ make clean
 
 
-[[Image(stv_masking.jpg)]][[br]]
-Green: common mask, Magenta: band mask
+![stv_masking](https://user-images.githubusercontent.com/13570487/74598660-51d93e00-5032-11ea-837b-8886edfccd85.jpg)
 
-= Manual =
+**Green:** common mask, **Magenta:** band mask
 
-== Features ==
+## Manual
+
+### Features
+
  * using masks for individual bands
  * using masks for all bands
  * getting bad pixels from the original image. Bad pixels must have NaN value
@@ -99,7 +99,7 @@ Green: common mask, Magenta: band mask
 
 
 
-== TV-Image ==
+### TV-Image
 
  * Mouse 
   * Double-click: re-centering the ellipse
