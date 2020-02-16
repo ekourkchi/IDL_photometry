@@ -252,84 +252,87 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
 
 
 ### Ellipse
- a. Edit ...
+ 1) Edit ...
    * Edit ellipse information
    * Look at terminal for the effective short key 
    * You need to switch back and force between TV and terminal 
- b. Original
+ 2) Original
    * Updates the ellipse info. and switched back to the original ellipse
    * Refresh the TV
 
 ### Stars
- a. Find ...
+ 1) Find ...
    * Find new point sources based on the entered PSF and limiting magnitudes
    * Use terminal to enter the input variables
- b. Delete ...
+ 2) Delete ...
    * Delete the masked point sources
    * Define a region (left/right mouse clicks)
    * All point sources inside the region would be removed from the point source mask
    * Useful to deselect the star forming regions of spiral galaxy arms
- c. Edit/Add ...
+ 3) Edit/Add ...
    * Add more point sources manually
    * Edit the existing point sources, e.g. increase/decrease their sizes
 
 
 ### Background 
- a. Back. Region
+ 1) Back. Region
    * Defining regions to measure the background
    * When using these regions, the elliptical annulus would no longer be used
- b. Clear Region
+ 2) Clear Region
    * Clean the previously defined background regions and go back to the annulus background estimation
 
 
 ### ds9
- a. Open
+
+ 1) Open
    * Opens the fits imaged of the current TV band on ds9
    * If TV is in the composite image mode, the main fits file (use-file) would be used
- b. Contours on/off
+ 2) Contours on/off
    * turning on/off the contours on the ds9 image
- c. Import ellipse
+ 3) Import ellipse
    * Imports the red elliptical aperture from ds9 to TV
- d. Export ellipse
+ 4) Export ellipse
    * Exports the current ellipse from TV to ds9
- e. Close all
+ 5) Close all
    * Closes all open ds9 windows
    * be careful this would close all ds9 windows, not necessarily those opened by GLGA TV
 
  
 ### SExtractor
- a. Run
+
+ 1) Run
    * Run SEWxtractor on the fits images of the current band
    * If TV is in the composite image mode, the main fits file (use-file) would be used
    * If SExtractor has been previously run, this asks the user to either use the existing results, or re-run SExtractor
    * Sometimes, masking the image helps SExtractor to fit a better ellipse
    * If users chooses to re-run SExtractor, a temporary fits image would be created, which includes all the common-/band- masks and the SExtractor uses that file to extract the ellipse paramters
    * Note: if the image is large, this process may take time. A large temporary file needs to be prepared for SExtractor, and SExtracting also takes time
- b. Segmentation
+ 2) Segmentation
    * This would display the Segmentation image that is produced by SExtractor. If this is not available, you need to run SExtractor first.
- c. Masked Image
+ 3) Masked Image
    * This would display the temporary masked region that has been already used in this session
- d. Region on
+ 4) Region on
    * This would turn on all the fitted ellipses by SExtractor. To see them, you need to open ds9
    * Segmentation, Maksed Image, TV Image can be used in ds9 to see these regions
- e. Region off
+ 5) Region off
    * This would turn off all regions previously openned in all ds9 windows
- f. Use-Mask
+ 6) Use-Mask
    * User can define a regions to be specifically used by SExtractor in this session
    * When TV starts, all previous SExtractor regions would be deleted, so this region is only valid in the current session
    * The rest of the image would be totally masked for SExtractor in the process of making the temporary file
    * The un-maksed defined region, then later would be masked by common/band/centroid masks
- g. Force-Mask
+ 7) Force-Mask
    * User can define regions to be specifically used by SExtractor in this session
    * This mask would not be affected by any other common/band/centeroid masks
    * For example, this is useful when a spike cuts a galaxy in to two halves and we do not want SExtractor fits two separates ellipses for one single object
- h. Clear-Mask
+ 8) Clear-Mask
    * Clear both Use-Mask and Force-Mask in the current session
    * If you don't clear these masks, they would be removed on the next run, because users are expected to run SExtractor only a few times to find the proper ellipse
    * Once a good ellipse is found, no more messing up with its parameters
 
 ### Pylipse
- a. Open
+
+ 1) Open
    * Opens Pylipse, a python program
    * There is a complete help on how to use this program
    * This can also be used stand-alone
@@ -337,14 +340,8 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * To export an ellipse from TV to Pylipse, you can re-open Pylipse (Menu > Pylipse > Open)
 
 
- b. Load Ellipse
+ 2) Load Ellipse
    * Saving (in Pylipse) and loading (Menu > Pyliupse > Load Ellipse) is a way to transfer ellipse from Pylipse to GLGA TV
-
-
-### Help 
- * The URL to this page ... :)
-
-
 
 
 ## OUTPUTS
