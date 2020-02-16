@@ -1,0 +1,79 @@
+The input source list need to be in the format:
+
+ID RA Dec major_diam minor_diam PA type
+
+major_diam and minor_diam are in arcmins
+
+I remember encountering a few bugs, so don't be surprised if you all meet some. 
+
+#### To make jpg from fits. You'll need to do it before qa
+
+glga_make_jpg_set
+
+* You may want to modify it a bit, ask it take the source list, not id and ra
+* Look into the code and you'll know what I am talking about. 
+
+#### To mask, adjust aperture, measure 
+
+glga_qa, file, ......
+
+/nobrowse : add this keyword to edit. 
+annuli_size = ? : in arcsec. step size of photometry annuli. Default=6 (I think)
+/skip : skip galaxies which are finished
+start =?  :  Number of name . Start the list from the designated galaxy.
+/sdss, /galex, etc : which survey images are you working on
+
+ ### To play with glga_qa:
+ (f) find stars (point source)
+ (r) manually mask out regions
+ (d) delete stars
+ (m) measure profiles. You would like to do this after masking. It makes some B/W images which are easier to check visually than the color image. It also make plots of surface brightness profiles. 
+ (k) kill all stars
+ (e) adjust ellipse 
+ (h) help 
+ (q) finish the galaxy, move to next
+ (Q) quit glga_qa
+ 
+ ### In (e), adjust ellipse. You would like to do this before putting all the masks, otherwise it would be slow
+ (z) shrink
+ (x) expand
+ ([,]) change axis ratio
+ (w,s,a,d) move up, down, left, right
+ (r) re-center with mouse
+ (c) cancel all modification
+ * note that once you make the adjustment, it will be recorded and next time the glga_qa will read the file, use the new ellipse.
+
+ ### After (q), you may give some flags, which can be called later to remind yourself what's happening there. Especially the (F) flag, in that way, you can ask glga_qa to skip galaxies with (F) flag next time.
+
+#### Only measure the profile 
+
+glga_batchprofile
+
+* keywords are similar to glga_qa
+* You may want to modify it a bit, ask it take the source list, not ra, dec, etc.
+* Look into the code and you'll know what I am talking about. 
+
+#### Only plot the profile
+
+glga_batchplots, file,  .........
+
+file : input source list
+
+#### To get products (photometry, plots, images......) in one place
+
+glga_deliver, file, ......
+
+/photometry : ascii photometry files
+/plots : surface profiles plots
+/aux   : auxillary file, including masks, ellipse, etc
+/jpg   : all jpg files, including images, profile plots
+/qa    : relevant file created by in glga_qa
+/images : color images of galaxies
+/galex, /sdss, etc : the survey image you want
+
+#### Where are all the outputs? 
+
+There are under data/XXXD/
+
+
+

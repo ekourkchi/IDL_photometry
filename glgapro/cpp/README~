@@ -1,0 +1,8 @@
+To compile pixval.cpp, you need to have cfitsio library installed in your system. 
+To compile this file on your machine, you can use the following command:
+
+c++ -o pixval pixval.cpp -I<cftisio_lib_path>/cfitsio -Wno-deprecated -lcfitsio
+
+Where, <cftisio_lib_path> should be replaced with the address to where cfitsio is installed. 
+
+cftisio provides a C++ platform to interact with fits files.

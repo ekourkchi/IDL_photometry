@@ -1,0 +1,142 @@
+ 
+  CSH sourced .... (enjoy :)
+ 
+---------------------
+
+File Name: cgcolor.pro    
+;     allcolors: in, optional, type=boolean, default=0
+;     brewer: in, optional, type=boolean, default=0
+;     cancel: out, optional, type=boolean, default=0
+;     check_connection: in, optional, type=boolean, default=0
+;     names: in, optional, type=boolian, default=0
+;     nodisplay: in, optional, type=boolean, default=0
+;        keyword is set is returned as a row vector, rather than as the default
+    ; Return to caller as the default error behavior.
+---------------------
+
+File Name: galex_radprof.pro    
+;    majordiam: scalar, specifiy units with diam_units keyword (default='arcsec')
+;    minordiam: scalar, specifiy units with diam_units keyword (default='arcsec') 
+;    zeropoint=zeropoint: scalar (defaults: NUV=20.08, FUV=18.82)
+;    diam_units=diam_units :'pixel'or 'arcmin' or 'arcsec' (default='arcsec')
+;    outpath=outpath: (default=current directory)
+		print,pre+'No astrometry, using default ellipse parameters'
+ ;radial profile increments (default = 6 arcsec)
+---------------------
+
+File Name: get_mask_radius.pro    
+; get_mask_radius - get the default radius for masking point sources
+radius = 6.	; default
+	print,'No profile for data type, returning default'
+	print,'Returning default: 6.'
+---------------------
+
+File Name: glga_batchmask.pro    
+; set defaults and check keywords
+---------------------
+
+File Name: glga_batchplots.pro    
+; set defaults and check keywords
+---------------------
+
+File Name: glga_batchprofile.pro    
+; set defaults and check keywords
+---------------------
+
+File Name: glga_batchptsrc.pro    
+; set defaults and check keywords
+; is there a file modifying the default ellipse?
+		print,'No astrometry, using default ellipse parameters' $
+	  	print,'No ellipse file, using default ellipse parameters'
+---------------------
+
+File Name: glga_batchqaplots.pro    
+; set defaults and check keywords
+---------------------
+
+File Name: glga_build_mast.pro    
+; default is to use visit level data.
+;defaults
+;default to visits
+---------------------
+
+File Name: glga_build.pro    
+;defaults
+---------------------
+
+File Name: glga_find_ptsrc.pro    
+; sigmult - sigma multiplier for threshhold (default = 2.5)
+; maglim - magnitude faint limit (default = 22)
+---------------------
+
+File Name: glga_fov.pro    
+; set defaults and check keywords
+---------------------
+
+File Name: glga_getlist.pro    
+; set defaults and check keywords
+---------------------
+
+File Name: glga_measure.pro    
+; set defaults and check keywords
+---------------------
+
+File Name: glga_plotgrade.pro    
+; set defaults and check keywords
+				; create new grade (default grade is 1)
+---------------------
+
+File Name: glga_plotview.pro    
+; set defaults and check keywords
+---------------------
+
+File Name: glga_qa.pro    
+; set defaults and check keywords
+; is there a file modifying the default ellipse?
+			print,pre+'No astrometry, using default ellipse '+ $
+			print,'No ellipse file, using default ellipse '+ $
+	pick_obj = (1 eq 0)	; default unselected
+---------------------
+
+File Name: glga_read_qa_stat.pro    
+; default qa structure
+---------------------
+
+File Name: glga_redoptsrc.pro    
+; set defaults and check keywords
+---------------------
+
+File Name: irac_radprof.pro    
+;    majordiam: scalar, specifiy units with diam_units keyword (default='arcsec')
+;    minordiam: scalar, specifiy units with diam_units keyword (default='arcsec') 
+;    zeropoint=zeropoint: scalar (defaults: 3631,000.0 mJy)
+;    diam_units=diam_units :'pixel'or 'arcmin' or 'arcsec' (default='arcsec')
+;    outpath=outpath: (default=current directory)
+		print,pre+'No astrometry, using default ellipse parameters'
+ ;radial profile increments (default = 6 arcsec)
+---------------------
+
+File Name: nw_arcsinh_fit.pro    
+;              - default is 3
+;set default nonlinearity
+---------------------
+
+File Name: nw_fit_to_box.pro    
+;              - default is [0,0,0]
+;  11/12/03 changed default origin - wherry
+---------------------
+
+File Name: nw_scale_rgb.pro    
+;              - defaults are [4.9,5.7,7.8]
+;set default scales
+---------------------
+
+File Name: panstarrs_radprof.pro    
+;    majordiam: scalar, specifiy units with diam_units keyword (default='arcsec')
+;    minordiam: scalar, specifiy units with diam_units keyword (default='arcsec') 
+;    zeropoint=zeropoint: scalar (defaults: 3631,000.0 mJy)
+;    diam_units=diam_units :'pixel'or 'arcmin' or 'arcsec' (default='arcsec')
+;    outpath=outpath: (default=current directory)
+ ; set zeropoint to default values
+		print,pre+'No astrometry, using default ellipse parameters'
+ ;radial profile increments (default = 3 arcsec)
