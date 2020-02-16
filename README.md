@@ -105,8 +105,8 @@ To remove all binary files in the *bin* folder, you can use the following comman
   * Double-click: re-centering the ellipse
   * Left-Click: choosing the vertices of a Region Of Interest (ROI)
   * Right-Click: 
-    a. enclosing a region of interest, when choosing a Region Of Interest (ROI)
-    b. repeating the highly demanding actions, which are
+    a) enclosing a region of interest, when choosing a Region Of Interest (ROI)
+    b) repeating the highly demanding actions, which are
       1. 'c' adding/editing centeroid
       2. 'd' deleting centeroids
       3. 'r' adding regions (masks)
@@ -127,20 +127,20 @@ To remove all binary files in the *bin* folder, you can use the following comman
   * [[span(style=color: #008000, '''Green filled regions''' )]]: these are the masks used for all bands (i.e. common-masks)  
   * [[span(style=color: #FF00FF	, '''Magenta  filled regions''' )]]: these are the masks used for each individual mask (i.e. band-masks)  
 
- * Notes:
+ * **Notes:**
   * Background estimation regions are always blue
   * Ellipse aperture/annulus are displayed with dotted lines
   * SExtractor related regions are displayed with dash-dotted
   * Background related regions are displayed with dashed lines
 
-== Control Panel ==
+## Control Panel
 
-=== Filter ===
+### Filter 
 
   1. Filter: You can change the image band. If the JPG file does not exist but the fits file exists, GUI asks the user to generate the JPG file and displays it.
   2. If the JPG file cannot be found anyway, TV does not change to the switched band.
 
-=== Buttons ===
+### Buttons 
 
 For all the buttons, you have a counterpart on the menu bar, but the opposite is not true. The letter in the parenthesis shows the short key to the same action, once you click on the image. A full set of all actions is also available on the terminal. 
 
@@ -201,9 +201,9 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
 
 
 
-== Menu Bar ==
+## Menu Bar
 
-=== File ===
+### File
 
  a. Measure >
    * run photometry
