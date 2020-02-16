@@ -1,7 +1,19 @@
 # Photometry Pipeline
 
+## Table of contents
+1. [Introduction](#intro)
+2. [SETUP](#setup)
+3. [Manual](#manual)
+4. [Control Panel](#control)
+5. [Menu Bar](#menu)
+6. [How to start the photometry](#start)
+7. [How to exit the program](#exit)
+8. [Misslenous points](#Misslenous)
+9. [Outputs](#OUTPUTS)
+10. [Disclaimer](#Disclaimer)
 
-## Introduction
+
+## Introduction <a name="intro"></a>
 
 For the surface photometry of our galaxies, we use the photometry pipeline that was originally developed to assemble the {\it WISE} Nearby Galaxy Atlas (WNGA; M. Seibert et al., in preparation). We added more flexibility to the WNGA pipeline and improved the efficiency of its user interface with providing a lot of easily accessible tools that facilitate the manual procedures required in our photometry program. In the photometry process, the galaxy light profile is derived within concentric elliptical apertures. The aperture is later repeatedly adjusted by either visual inspections, or with the aid of *SExtractor* and/or the galaxy isophots visualized by *DS9*.
 
@@ -12,7 +24,7 @@ The quality of the generated light profiles and growth curves are visually inspe
 ![stv_preview2](https://user-images.githubusercontent.com/13570487/74598526-42f18c00-5030-11ea-84a8-50dcf856ec23.jpg)
 
 
-## SETUP 
+## SETUP <a name="setup"></a>
 
 Before launching the program in IDL:
 
@@ -93,7 +105,7 @@ To remove all binary files in the *bin* folder, you can use the following comman
 
 **Green:** common mask, **Magenta:** band mask
 
-## Manual
+## Manual <a name="manual"></a>
 
 ### Features
 
@@ -141,7 +153,7 @@ To remove all binary files in the *bin* folder, you can use the following comman
   * *SExtractor* related regions are displayed with dash-dotted
   * Background related regions are displayed with dashed lines
 
-## Control Panel
+## Control Panel <a name="control"></a>
 
 ### Filter 
 
@@ -208,7 +220,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
 
 
 
-## Menu Bar
+## Menu Bar <a name="menu"></a>
 
 ### File
 
@@ -393,7 +405,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
  2) Load Ellipse
    * Saving (in Pylipse) and loading (Menu > Pyliupse > Load Ellipse) is a way to transfer ellipse from Pylipse to GLGA TV
 
-## How to start the photometry
+## How to start the photometry <a name="start"></a>
 
    * Suppose you are happy with all the mask and the elliptical apertures. To run the photometry click on this button
 
@@ -403,7 +415,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * Then GLGLA windows pop out. You will also see the image of the galaxy in different bands, as well as the surface brightness profiles.
    * You can then repeat the process until you are happy with the profiles you see.
 
-## How to exit the program:
+## How to exit the program <a name="exit"></a>
 
  1) `Quit` --> exits the program. No change would be saved.
  2) `quit-next` --> Saves the photometry you just did, as well as all the information regarding to mask etc, and then it moves on to the next galaxy in the list. If you are done with the current galaxy, please check "Finished" option.
@@ -436,7 +448,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * other: if you have other concerns (put a note for it)
 
    
-## Misslenous points
+## Misslenous points <a name="Misslenous"></a>
 
  1) If you see blue stars (and big stars) in general, don't only rely on the automatic psf-based masks (the orange/blue circular shapes). These stars are bigger than what you see, therefore add another manual mask around them 
 
@@ -454,7 +466,7 @@ after adding manual mask:
  4) Use the first or second to the last elliptical contour to fit the best ellipse. Note that when you import your ellipse on to the color TV, your ellipse and the visual shape of the galaxy should be consistent. If they are too much different, something is wrong. 
 
  
-## OUTPUTS
+## Outputs <a name="OUTPUTS"></a>
 
 ![pgc055_PS_panstarrs_images](https://user-images.githubusercontent.com/13570487/74598760-ac739980-5034-11ea-810e-98d1a3fa4cf8.jpg)
 
@@ -476,6 +488,8 @@ after adding manual mask:
 ![pgc055_PS_panstarrs_profile](https://user-images.githubusercontent.com/13570487/74598770-c7460e00-5034-11ea-904e-03c672b1628b.jpg)
 
    - - - -
-   
+
+## Disclaimer <a name="Disclaimer"></a>
+
  * All rights reserved. The material may not be reproduced or distributed, in whole or in part, without the prior agreement
  * Contact: *Ehsan Kourkchi* <ekourkchi@gmail.com>
