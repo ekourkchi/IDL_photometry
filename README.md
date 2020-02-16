@@ -379,4 +379,4 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    - - - -
    
  * All rights reserved. The material may not be reproduced or distributed, in whole or in part, without the prior agreement
- * Contact: Ehsan Kourkchi <ekourkchi@gmail.com>
+ * Contact: *Ehsan Kourkchi* <ekourkchi@gmail.com>
