@@ -19,7 +19,7 @@ For the surface photometry of our galaxies, we use the photometry pipeline that 
 
 The sky background is evaluated within a large annulus far from the photometry aperture. All foreground stars are initially masked automatically, however, further manual masking is required for the companion extended objects, point sources that are not automatically recognized, and other features such as diffraction spikes. In addition, the software tends to mask the blue star forming clumps in spiral arms, which are needed to be unmasked.
 
-The quality of the generated light profiles and growth curves are visually inspected. If necessary, further masking/unmasking and adjustments of the aperture and the background estimation annulus are applied iteratively until the growth curve converges. At the end of each iteration, the resulting luminosity growth curve and surface brightens profile provide good insights about any abnormal changes in luminosity due to unmasked objects or poor subtraction of the sky level. 
+The quality of the generated light profiles and growth curves are visually inspected. If necessary, further masking/unmasking and adjustments of the aperture and the background estimation annulus are applied iteratively until the growth curve converges. At the end of each iteration, the resulting luminosity growth curve and surface brightness profile provide good insights about any abnormal changes in luminosity due to unmasked objects or poor subtraction of the sky level. 
 
 ![stv_preview2](https://user-images.githubusercontent.com/13570487/74598526-42f18c00-5030-11ea-84a8-50dcf856ec23.jpg)
 
@@ -397,7 +397,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
  1) Open
    * Opens Pylipse, a python program
    * There is a complete help on how to use this program
-   * This can also be used stand-alone
+   * This can also be used stand-alone. See here: https://github.com/ekourkchi/Pylipse
    * *ds9* can be used as a bridge to import/export ellipse to/from this program
    * To export an ellipse from TV to Pylipse, you can re-open Pylipse (Menu > Pylipse > Open)
 
