@@ -1,0 +1,32 @@
+;;
+;; IDLWAVE catalog for library Astrolib
+;; Automatically Generated -- do not edit.
+;; Created by idlwave_catalog on Tue Apr 19 14:54:27 2016
+;;
+(setq idlwave-library-catalog-libname "Astrolib")
+(setq idlwave-library-catalog-routines
+ '(("mpfit_dummy" pro nil (lib "mpfit.pro" nil "Astrolib") "%s" (nil))
+   ("mpfit_resetprof" pro nil (lib "mpfit.pro" nil "Astrolib") "%s" (nil))
+   ("mpfit_setmachar" pro nil (lib "mpfit.pro" nil "Astrolib") "%s" (nil ("double")))
+   ("mpfit_call_func_noextra" fun nil (lib "mpfit.pro" nil "Astrolib") "Result = %s(fcn, x, fjac)" (nil ("_EXTRA")))
+   ("mpfit_call_func_extra" fun nil (lib "mpfit.pro" nil "Astrolib") "Result = %s(fcn, x, fjac)" (nil ("_EXTRA")))
+   ("mpfit_call_pro_noextra" fun nil (lib "mpfit.pro" nil "Astrolib") "Result = %s(fcn, x, fjac)" (nil ("_EXTRA")))
+   ("mpfit_call_pro_extra" fun nil (lib "mpfit.pro" nil "Astrolib") "Result = %s(fcn, x, fjac)" (nil ("_EXTRA")))
+   ("mpfit_call" fun nil (lib "mpfit.pro" nil "Astrolib") "Result = %s(fcn, x, fjac)" (nil ("_EXTRA")))
+   ("mpfit_fdjac2" fun nil (lib "mpfit.pro" nil "Astrolib") "Result = %s(fcn, x, fvec, step, ulimited, ulimit, dside)" (nil ("autoderiv") ("deriv_abstol") ("deriv_debug") ("deriv_reltol") ("dstep") ("epsfcn") ("FUNCTARGS") ("iflag") ("ifree") ("xall")))
+   ("mpfit_enorm" fun nil (lib "mpfit.pro" nil "Astrolib") "Result = %s(vec)" (nil))
+   ("mpfit_qrfac" pro nil (lib "mpfit.pro" nil "Astrolib") "%s, a, ipvt, rdiag, acnorm" (nil ("pivot")))
+   ("mpfit_qrsolv" pro nil (lib "mpfit.pro" nil "Astrolib") "%s, r, ipvt, diag, qtb, x, sdiag" (nil))
+   ("mpfit_lmpar" fun nil (lib "mpfit.pro" nil "Astrolib") "Result = %s(r, ipvt, diag, qtb, delta, x, sdiag)" (nil ("par")))
+   ("mpfit_tie" pro nil (lib "mpfit.pro" nil "Astrolib") "%s, p" (nil))
+   ("mpfit_defprint" pro nil (lib "mpfit.pro" nil "Astrolib") "%s, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18" (nil ("_EXTRA") ("format") ("unit")))
+   ("mpfit_defiter" pro nil (lib "mpfit.pro" nil "Astrolib") "%s, fcn, x, iter, fnorm" (nil ("_EXTRA") ("dof") ("format") ("FUNCTARGS") ("iterkeybyte") ("iterprint") ("iterstop") ("parinfo") ("pformat") ("quiet")))
+   ("mpfit_parinfo" pro nil (lib "mpfit.pro" nil "Astrolib") "%s, parinfo, tnames, tag, values" (nil ("default") ("n_param") ("status")))
+   ("mpfit_covar" fun nil (lib "mpfit.pro" nil "Astrolib") "Result = %s(rr, ipvt)" (nil ("tol")))
+   ("mpfit_revision" fun nil (lib "mpfit.pro" nil "Astrolib") "Result = %s" (nil))
+   ("mpfit_parse_version" fun nil (lib "mpfit.pro" nil "Astrolib") "Result = %s(version)" (nil))
+   ("mpfit_min_version" fun nil (lib "mpfit.pro" nil "Astrolib") "Result = %s(version, min_version)" (nil))
+   ("mpfit_reset_recursion" pro nil (lib "mpfit.pro" nil "Astrolib") "%s" (nil))
+   ("mpfit" fun nil (lib "mpfit.pro" nil "Astrolib") "Result = %s(fcn, xall)" (nil ("autoderivative") ("best_fjac") ("best_resid") ("bestnorm") ("calc_fjac") ("covar") ("diag") ("dof") ("epsfcn") ("errmsg") ("external_fjac") ("external_fvec") ("external_init") ("external_state") ("factor") ("fastnorm") ("ftol") ("FUNCTARGS") ("gtol") ("iterargs") ("iterkeystop") ("iterproc") ("iterstop") ("maxiter") ("min_version") ("nfev") ("nfree") ("niter") ("nocatch") ("nocovar") ("npegged") ("nprint") ("parinfo") ("perror") ("pfree_index") ("proc") ("query") ("quiet") ("rescale") ("resdamp") ("SCALE_FCN") ("STATUS") ("version") ("xtol")))
+   ("mpfit2dfun_eval" fun nil (lib "mpfit2dfun.pro" nil "Astrolib") "Result = %s(p, dp)" (nil ("_EXTRA")))
+   ("mpfit2dfun" fun nil (lib "mpfit2dfun.pro" nil "Astrolib") "Result = %s(fcn, x, y, z, err, p)" (nil ("_EXTRA") ("BESTNORM") ("covar") ("dof") ("ERRMSG") ("FUNCTARGS") ("nfev") ("nfree") ("niter") ("npegged") ("parinfo") ("perror") ("query") ("quiet") ("STATUS") ("WEIGHTS") ("yfit")))))

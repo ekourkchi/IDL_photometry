@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /ftp/pro/math</title>
+ </head>
+ <body>
+<h1>Index of /ftp/pro/math</h1>
+<pre>      <a href="?C=N;O=A">Name</a>                    <a href="?C=M;O=A">Last modified</a>      <a href="?C=S;O=A">Size</a>  <a href="?C=D;O=A">Description</a><hr>      <a href="/ftp/pro/">Parent Directory</a>                             -   
+      <a href="zbrent.pro">zbrent.pro</a>              15-Jan-2012 11:06  5.8K  
+      <a href="tsum.pro">tsum.pro</a>                03-Jun-2014 15:38  3.3K  
+      <a href="tsc.pro">tsc.pro</a>                 15-Feb-2013 14:42   21K  
+      <a href="trapzd.pro">trapzd.pro</a>              08-Apr-2008 13:11  3.2K  
+      <a href="transform_coeff.pro">transform_coeff.pro</a>     15-Feb-2013 14:41  1.9K  
+      <a href="tabinv.pro">tabinv.pro</a>              03-Jan-2012 13:08  3.3K  
+      <a href="sixlin.pro">sixlin.pro</a>              15-Feb-2013 14:35  5.5K  
+      <a href="safe_correlate.pro">safe_correlate.pro</a>      21-Jul-2014 13:57  8.4K  
+      <a href="randomwish.pro">randomwish.pro</a>          17-May-2007 16:53  1.2K  
+      <a href="randomp.pro">randomp.pro</a>             21-Feb-1999 00:00  2.9K  
+      <a href="randomgam.pro">randomgam.pro</a>           17-May-2007 16:53  1.8K  
+      <a href="randomdir.pro">randomdir.pro</a>           17-May-2007 16:53  1.2K  
+      <a href="randomchi.pro">randomchi.pro</a>           17-May-2007 16:53  828   
+      <a href="quadterp.pro">quadterp.pro</a>            14-Aug-2011 17:37  4.9K  
+      <a href="qtrap.pro">qtrap.pro</a>               11-Jan-2012 17:43  2.9K  
+      <a href="qsimp.pro">qsimp.pro</a>               29-Oct-2013 11:29  3.8K  
+      <a href="prob_kuiper.pro">prob_kuiper.pro</a>         15-Feb-2013 14:40  2.2K  
+      <a href="prob_ks.pro">prob_ks.pro</a>             15-Feb-2013 14:40  2.1K  
+      <a href="polyleg.pro">polyleg.pro</a>             23-Sep-2002 00:00  2.1K  
+      <a href="poly_smooth.pro">poly_smooth.pro</a>         15-Feb-2013 14:44  7.2K  
+      <a href="polint.pro">polint.pro</a>              22-Jul-2000 00:00  2.3K  
+      <a href="poidev.pro">poidev.pro</a>              11-Jan-2012 17:51  4.7K  
+      <a href="permute.pro">permute.pro</a>             24-Mar-2006 09:32  3.5K  
+      <a href="pent.pro">pent.pro</a>                15-Feb-2013 14:46  4.6K  
+      <a href="pca.pro">pca.pro</a>                 30-Sep-2015 16:05   10K  
+      <a href="ngp.pro">ngp.pro</a>                 15-Feb-2013 14:42  6.2K  
+      <a href="multinom.pro">multinom.pro</a>            17-May-2007 16:53  1.6K  
+      <a href="mrandomn.pro">mrandomn.pro</a>            05-Nov-2013 11:14  2.4K  
+      <a href="mlinmix_err.pro">mlinmix_err.pro</a>         15-Feb-2013 14:47   29K  
+      <a href="minf_parabolic.pro">minf_parabolic.pro</a>      05-Dec-1998 00:00  6.2K  
+      <a href="minf_parabol_d.pro">minf_parabol_d.pro</a>      19-Mar-2000 00:00  7.2K  
+      <a href="minf_conj_grad.pro">minf_conj_grad.pro</a>      15-Feb-2013 14:37  5.4K  
+      <a href="minf_bracket.pro">minf_bracket.pro</a>        17-Jul-1998 00:00  5.5K  
+      <a href="meanclip.pro">meanclip.pro</a>            01-Nov-2006 15:03  2.8K  
+      <a href="linterp.pro">linterp.pro</a>             12-Feb-2015 11:58  5.1K  
+      <a href="linmix_err.pro">linmix_err.pro</a>          15-Feb-2013 14:38   46K  
+      <a href="kuipertwo.pro">kuipertwo.pro</a>           25-Feb-2011 15:47  4.7K  
+      <a href="kuiperone.pro">kuiperone.pro</a>           25-Feb-2011 15:48  4.7K  
+      <a href="kstwo.pro">kstwo.pro</a>               15-Feb-2013 14:39  3.4K  
+      <a href="ksone.pro">ksone.pro</a>               25-Feb-2011 15:41  5.2K  
+      <a href="hermite.pro">hermite.pro</a>             15-Feb-2013 14:45  4.6K  
+      <a href="gaussian.pro">gaussian.pro</a>            18-Nov-2001 00:00  3.9K  
+      <a href="flegendre.pro">flegendre.pro</a>           26-Apr-2002 00:00  2.4K  
+      <a href="fitexy.pro">fitexy.pro</a>              14-Feb-2014 21:25  8.1K  
+      <a href="cspline.pro">cspline.pro</a>             25-Feb-2011 15:33  3.0K  
+      <a href="cic.pro">cic.pro</a>                 15-Feb-2013 14:42   13K  
+      <a href="avg.pro">avg.pro</a>                 24-Oct-2012 13:22  4.7K  
+      <a href="asinh.pro">asinh.pro</a>               08-Oct-2003 00:00  1.1K  
+      <a href="aaareadme.txt">aaareadme.txt</a>           20-Feb-2013 13:27  8.4K  
+      <a href=".idlwave_catalog">.idlwave_catalog</a>        19-Apr-2016 14:54  7.3K  
+<hr></pre>
+</body></html>

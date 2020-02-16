@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /ftp/pro/coyote</title>
+ </head>
+ <body>
+<h1>Index of /ftp/pro/coyote</h1>
+<pre>      <a href="?C=N;O=A">Name</a>                    <a href="?C=M;O=A">Last modified</a>      <a href="?C=S;O=D">Size</a>  <a href="?C=D;O=A">Description</a><hr>      <a href="/ftp/pro/">Parent Directory</a>                             -   
+      <a href="getprimaryscreensize.pro">getprimaryscreensize..&gt;</a> 08-Mar-2012 10:39  3.9K  
+      <a href="ps_background.pro">ps_background.pro</a>       25-Nov-2011 16:42  4.1K  
+      <a href="cghasimagemagick.pro">cghasimagemagick.pro</a>    13-Nov-2012 13:48  4.5K  
+      <a href="cgcoyotegraphic.pro">cgcoyotegraphic.pro</a>     25-Jan-2013 15:12  4.5K  
+      <a href="aaareadme.txt">aaareadme.txt</a>           26-Feb-2014 11:45  4.7K  
+      <a href="cgcolor24.pro">cgcolor24.pro</a>           13-Nov-2012 13:49  4.9K  
+      <a href="fpufix.pro">fpufix.pro</a>              25-Nov-2011 16:48  5.1K  
+      <a href="cgpsdims.pro">cgpsdims.pro</a>            15-Dec-2014 14:23  5.2K  
+      <a href="fsc_ps_setup__define.pro">fsc_ps_setup__define..&gt;</a> 05-Nov-2013 13:10  5.3K  
+      <a href="cgimageinfodescribevalues.pro">cgimageinfodescribev..&gt;</a> 26-Mar-2014 15:12  5.3K  
+      <a href="windowavailable.pro">windowavailable.pro</a>     05-Nov-2013 13:10  5.4K  
+      <a href="cgdbltostr.pro">cgdbltostr.pro</a>          29-Jan-2013 15:07  5.6K  
+      <a href="setdefaultvalue.pro">setdefaultvalue.pro</a>     26-Mar-2014 15:11  5.7K  
+      <a href="cgbitget.pro">cgbitget.pro</a>            28-Jan-2014 17:11  5.9K  
+      <a href="aspect.pro">aspect.pro</a>              15-Feb-2013 13:28  6.0K  
+      <a href="cgshow.pro">cgshow.pro</a>              05-Nov-2013 13:10  6.7K  
+      <a href="cggetcolorstate.pro">cggetcolorstate.pro</a>     05-Nov-2013 13:12  6.8K  
+      <a href="image_dimensions.pro">image_dimensions.pro</a>    02-May-2012 17:28  7.1K  
+      <a href="cgcentertlb.pro">cgcentertlb.pro</a>         29-Oct-2013 13:38  7.1K  
+      <a href="cgset.pro">cgset.pro</a>               08-Mar-2012 10:39  7.4K  
+      <a href="cgerase.pro">cgerase.pro</a>             05-Nov-2013 13:10  7.8K  
+      <a href="colorsareidentical.pro">colorsareidentical.pro</a>  23-Oct-2012 13:07  7.9K  
+      <a href="convert_to_type.pro">convert_to_type.pro</a>     08-Dec-2011 13:36  7.9K  
+      <a href="cgquery.pro">cgquery.pro</a>             08-Jan-2013 13:18  8.0K  
+      <a href="str_size.pro">str_size.pro</a>            25-Nov-2011 16:42  8.4K  
+      <a href="cgscalevector.pro">cgscalevector.pro</a>       30-Dec-2013 16:00  8.8K  
+      <a href="cgdefcharsize.pro">cgdefcharsize.pro</a>       28-Jan-2014 17:47  9.1K  
+      <a href="cgsourcedir.pro">cgsourcedir.pro</a>         28-Jan-2014 17:11  9.3K  
+      <a href="cgrootname.pro">cgrootname.pro</a>          30-Sep-2013 21:09  9.4K  
+      <a href="undefine.pro">undefine.pro</a>            01-Jul-2013 16:38   10K  
+      <a href="cgsetcolorstate.pro">cgsetcolorstate.pro</a>     05-Nov-2013 13:18   10K  
+      <a href="cgcheckforsymbols.pro">cgcheckforsymbols.pro</a>   05-Nov-2013 13:10   11K  
+      <a href="cgpickfile.pro">cgpickfile.pro</a>          28-Jan-2014 17:47   11K  
+      <a href="cgcolorfill.pro">cgcolorfill.pro</a>         28-Jan-2014 17:47   12K  
+      <a href="cgdefaultcolor.pro">cgdefaultcolor.pro</a>      05-Nov-2013 13:10   12K  
+      <a href="cgerrormsg.pro">cgerrormsg.pro</a>          05-Nov-2013 13:13   13K  
+      <a href="cgfixps.pro">cgfixps.pro</a>             05-Nov-2013 13:10   13K  
+      <a href="cgwindow_getdefs.pro">cgwindow_getdefs.pro</a>    26-Mar-2014 15:11   14K  
+      <a href="cgaxis.pro">cgaxis.pro</a>              05-Nov-2013 13:10   14K  
+      <a href="cgpolygon.pro">cgpolygon.pro</a>           28-Jan-2014 17:47   14K  
+      <a href="cgps2pdf.pro">cgps2pdf.pro</a>            26-Mar-2014 15:11   14K  
+      <a href="cgdisplay.pro">cgdisplay.pro</a>           30-May-2014 13:25   15K  
+      <a href="cgtext.pro">cgtext.pro</a>              05-Nov-2013 13:10   16K  
+      <a href="cggreek.pro">cggreek.pro</a>             05-Nov-2013 13:10   17K  
+      <a href="cgpswindow.pro">cgpswindow.pro</a>          26-Feb-2014 11:44   17K  
+      <a href="cglayout.pro">cglayout.pro</a>            15-Dec-2014 12:49   17K  
+      <a href="cgps_open.pro">cgps_open.pro</a>           25-Mar-2015 12:46   19K  
+      <a href="cgsnapshot.pro">cgsnapshot.pro</a>          26-Feb-2014 11:41   19K  
+      <a href="cgplots.pro">cgplots.pro</a>             15-Dec-2014 14:23   20K  
+      <a href="cgps_close.pro">cgps_close.pro</a>          26-Mar-2014 15:11   21K  
+      <a href="cgps2raster.pro">cgps2raster.pro</a>         26-Mar-2014 15:11   21K  
+      <a href="cgsymbol.pro">cgsymbol.pro</a>            15-Dec-2014 14:23   22K  
+      <a href="fsc_droplist.pro">fsc_droplist.pro</a>        05-Nov-2013 13:10   22K  
+      <a href="cgwindow_setdefs.pro">cgwindow_setdefs.pro</a>    30-Dec-2013 16:00   23K  
+      <a href="cgsymcat.pro">cgsymcat.pro</a>            15-Dec-2014 12:49   23K  
+      <a href="cgps_config.pro">cgps_config.pro</a>         24-Apr-2014 17:01   24K  
+      <a href="cgcontrol.pro">cgcontrol.pro</a>           05-Nov-2013 13:10   34K  
+      <a href="cgwindow.pro">cgwindow.pro</a>            23-Sep-2015 14:17   35K  
+      <a href="fsc_plotwindow.pro">fsc_plotwindow.pro</a>      05-Nov-2013 13:10   36K  
+      <a href="linkedlist__define.pro">linkedlist__define.pro</a>  22-Dec-2011 16:34   39K  
+      <a href="cgpickcolorname.pro">cgpickcolorname.pro</a>     25-Mar-2015 12:46   40K  
+      <a href=".idlwave_catalog">.idlwave_catalog</a>        19-Apr-2016 14:54   42K  
+      <a href="fsc_fileselect.pro">fsc_fileselect.pro</a>      05-Nov-2013 13:10   49K  
+      <a href="cgplot.pro">cgplot.pro</a>              15-Dec-2014 14:16   55K  
+      <a href="cgcolor.pro">cgcolor.pro</a>             25-Mar-2015 12:46   55K  
+      <a href="cgcontour.pro">cgcontour.pro</a>           15-Dec-2014 14:23   63K  
+      <a href="fsc_field.pro">fsc_field.pro</a>           05-Nov-2013 13:10   71K  
+      <a href="fsc_psconfig__define.pro">fsc_psconfig__define..&gt;</a> 24-Apr-2014 17:01  120K  
+      <a href="cgcmdwindow__define.pro">cgcmdwindow__define.pro</a> 25-Mar-2015 12:46  139K  
+<hr></pre>
+</body></html>

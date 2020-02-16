@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /ftp/pro/fits_bintable</title>
+ </head>
+ <body>
+<h1>Index of /ftp/pro/fits_bintable</h1>
+<pre>      <a href="?C=N;O=A">Name</a>                    <a href="?C=M;O=A">Last modified</a>      <a href="?C=S;O=A">Size</a>  <a href="?C=D;O=D">Description</a><hr>      <a href="/ftp/pro/">Parent Directory</a>                             -   
+      <a href=".idlwave_catalog">.idlwave_catalog</a>        19-Apr-2016 14:54  5.4K  
+      <a href="aaareadme.txt">aaareadme.txt</a>           13-Dec-2007 14:41   12K  
+      <a href="changes.txt">changes.txt</a>             13-Mar-2014 11:51  3.8K  
+      <a href="fxaddpar.pro">fxaddpar.pro</a>            22-Sep-2015 20:56   29K  
+      <a href="fxbaddcol.pro">fxbaddcol.pro</a>           15-Feb-2013 13:46   13K  
+      <a href="fxbclose.pro">fxbclose.pro</a>            29-Nov-2000 00:00  2.4K  
+      <a href="fxbcolnum.pro">fxbcolnum.pro</a>           10-Nov-2000 00:00  3.5K  
+      <a href="fxbcreate.pro">fxbcreate.pro</a>           05-Apr-2010 12:52  6.0K  
+      <a href="fxbdimen.pro">fxbdimen.pro</a>            09-Jul-2001 00:00  4.3K  
+      <a href="fxbfind.pro">fxbfind.pro</a>             10-May-2010 13:19  4.9K  
+      <a href="fxbfindlun.pro">fxbfindlun.pro</a>          18-Mar-2008 16:49  2.8K  
+      <a href="fxbfinish.pro">fxbfinish.pro</a>           29-Nov-2000 00:00  3.5K  
+      <a href="fxbgrow.pro">fxbgrow.pro</a>             14-Nov-2007 14:30  8.3K  
+      <a href="fxbheader.pro">fxbheader.pro</a>           14-Sep-2006 14:44  2.2K  
+      <a href="fxbhelp.pro">fxbhelp.pro</a>             06-Apr-2010 12:05  3.3K  
+      <a href="fxbhmake.pro">fxbhmake.pro</a>            29-Nov-2000 00:00  4.7K  
+      <a href="fxbintable.pro">fxbintable.pro</a>          29-Nov-2000 00:00  2.7K  
+      <a href="fxbisopen.pro">fxbisopen.pro</a>           09-Jul-2001 00:00  2.1K  
+      <a href="fxbopen.pro">fxbopen.pro</a>             18-Mar-2008 16:49   11K  
+      <a href="fxbparse.pro">fxbparse.pro</a>            06-Apr-2010 12:04  5.3K  
+      <a href="fxbread.pro">fxbread.pro</a>             10-Dec-2009 12:55   13K  
+      <a href="fxbreadm.pro">fxbreadm.pro</a>            13-Mar-2014 11:23   36K  
+      <a href="fxbstate.pro">fxbstate.pro</a>            09-Jul-2001 00:00  1.9K  
+      <a href="fxbtdim.pro">fxbtdim.pro</a>             29-Nov-2000 00:00  2.3K  
+      <a href="fxbtform.pro">fxbtform.pro</a>            06-Apr-2010 12:05  6.1K  
+      <a href="fxbwrite.pro">fxbwrite.pro</a>            13-Mar-2014 11:22  8.4K  
+      <a href="fxbwritm.pro">fxbwritm.pro</a>            15-Feb-2013 13:50   26K  
+      <a href="fxfindend.pro">fxfindend.pro</a>           18-Mar-2008 16:49  2.7K  
+      <a href="fxhclean.pro">fxhclean.pro</a>            10-Nov-2000 00:00  3.2K  
+      <a href="fxhmake.pro">fxhmake.pro</a>             14-Jan-2008 09:54  7.7K  
+      <a href="fxhmodify.pro">fxhmodify.pro</a>           23-Dec-2014 13:11   11K  
+      <a href="fxhread.pro">fxhread.pro</a>             10-Nov-2000 00:00  3.1K  
+      <a href="fxpar.pro">fxpar.pro</a>               22-Sep-2015 20:56   20K  
+      <a href="fxparpos.pro">fxparpos.pro</a>            10-Nov-2000 00:00  2.4K  
+      <a href="fxread.pro">fxread.pro</a>              26-Sep-2014 11:01   21K  
+      <a href="fxwrite.pro">fxwrite.pro</a>             13-Mar-2014 11:25   11K  
+<hr></pre>
+</body></html>
