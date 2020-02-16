@@ -1,7 +1,13 @@
-## Photometry Pipeline
+# Photometry Pipeline
 
 
-http://svn.pan-starrs.ifa.hawaii.edu/trac/ipp/wiki/glga_manual
+## Introduction
+
+For the surface photometry of our galaxies, we use the photometry pipeline that was originally developed to assemble the {\it WISE} Nearby Galaxy Atlas (WNGA; M. Seibert et al., in preparation). We added more flexibility to the WNGA pipeline and improved the efficiency of its user interface with providing a lot of easily accessible tools that facilitate the manual procedures required in our photometry program. In the photometry process, the galaxy light profile is derived within concentric elliptical apertures. The aperture is later repeatedly adjusted by either visual inspections, or with the aid of *SExtractor* and/or the galaxy isophots visualized by *DS9*.
+
+The sky background is evaluated within a large annulus far from the photometry aperture. All foreground stars are initially masked automatically, however, further manual masking is required for the companion extended objects, point sources that are not automatically recognized, and other features such as diffraction spikes. In addition, the software tends to mask the blue star forming clumps in spiral arms, which are needed to be unmasked.
+
+The quality of the generated light profiles and growth curves are visually inspected. If necessary, further masking/unmasking and adjustments of the aperture and the background estimation annulus are applied iteratively until the growth curve converges. At the end of each iteration, the resulting luminosity growth curve and surface brightens profile provide good insights about any abnormal changes in luminosity due to unmasked objects or poor subtraction of the sky level. 
 
 ![stv_preview2](https://user-images.githubusercontent.com/13570487/74598526-42f18c00-5030-11ea-84a8-50dcf856ec23.jpg)
 
@@ -435,6 +441,17 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
  1) If you see blue stars (and big stars) in general, don't only rely on the automatic psf-based masks (the orange/blue circular shapes). These stars are bigger than what you see, therefore add another manual mask around them 
 
 ![unnamed (8)](https://user-images.githubusercontent.com/13570487/74599145-c44e1c00-503a-11ea-9598-1e3e7ac590a7.png)
+
+after adding manual mask:
+
+![unnamed (9)](https://user-images.githubusercontent.com/13570487/74599168-1ee77800-503b-11ea-96f2-20889181cae0.png)
+
+
+ 2) Do not try to mask many objects outside the outer dotted elliptical aperture, it's the waste of time. Usually, if you see a bright feature that can leak into the border annulus, you should mask it, but if it's far from the aperture, leave it unmasked.
+
+ 3) While you should mask any spot that is visible to your eye in the colorful image on the main TV, keep in mind that over-masking (and even using very large masks) makes the program slower. If you refresh or resize your ellipse, you have to wait longer to load all the green masks first. So it's easier to finalize your decisions about the size and orientation of the aperture before you start masking. 
+
+ 4) Use the first or second to the last elliptical contour to fit the best ellipse. Note that when you import your ellipse on to the color TV, your ellipse and the visual shape of the galaxy should be consistent. If they are too much different, something is wrong. 
 
  
 ## OUTPUTS
