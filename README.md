@@ -1,35 +1,34 @@
 ## Photometry Pipeline
 
 
-![stv_preview2](https://user-images.githubusercontent.com/13570487/74598526-42f18c00-5030-11ea-84a8-50dcf856ec23.jpg | width=200)
+![stv_preview2](https://user-images.githubusercontent.com/13570487/74598526-42f18c00-5030-11ea-84a8-50dcf856ec23.jpg)
 
 
 ## SETUP 
 
 Before launching the program in IDL:
 
- 1. Set the following environment variable to point at the address where '''GLGA''' codes are stored.
-{{{
-export IDL_GLGAPRO='$HOME/PanStarrs/glgapro/'
-}}}
+1. Set the following environment variable to point at the address where **GLGA** codes are stored.
 
-This is what you may have in "glgapro" folder:
+            export IDL_GLGAPRO='$HOME/PanStarrs/glgapro/'
 
-{{{
+
+This is what you may have in "*glgapro*" folder:
+
+
  * astrolib
  * bin          > binary files
  * coyote 
  * cpp          > C programs (compiled binary files in bin folder)
- * dust         > necessary files to calculate extinction
+ * dust         > necessary files to calculate extinction (email me to request for these files)
  * extra
  * documents    > dcumentations and manual
  * idlpro       > all glga IDL clodes
- * plot  
  * pypro        > python codes 
  * scripts      > shell scripts
  * sextract     > SExtractor config. files
  * startup.pro
-}}}
+
 
 2. In IDL, define where the data-base is:
 {{{
