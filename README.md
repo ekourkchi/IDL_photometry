@@ -410,7 +410,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
    * Bright-star: If there is a bright star in the field that dominate some parts or the entire image. you do the best job to mask out every details, however at the end you are not sure if there is any remaining light (gradients).
    * *Note:* Please write about everything weird you see on the image inside the `QA Note box`. This helps the others to assess the problem easier. 
 
-![unnamed (6)](https://user-images.githubusercontent.com/13570487/74599113-425df300-503a-11ea-8c29-048d7600eea9.png)
+![unnamed (7)](https://user-images.githubusercontent.com/13570487/74599154-ea73bc00-503a-11ea-8b0d-c1468d2eb62e.png)
 
  4) In the above flag window, the options are:
    * Disturbed and/or distorted (confused)           
