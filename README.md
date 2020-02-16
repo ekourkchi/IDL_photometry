@@ -206,22 +206,22 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
 
 ### File
 
- a. Measure >
+ 1) Measure >
    * run photometry
- b. Refresh TV
+ 2) Refresh TV
    * reload the JPG image
    * reload ellipse info
    * reload all mask
- c. quit-next
+ 3) quit-next
    * saving ellipse info
    * entering flags and note 
    * go to the next galaxy in the list
- d. Skip ...
+ 4) Skip ...
    * skipping the current galaxy
    * updated ellipse info would not be saved
    * ask user if he/she wants to save the newly added regions
    * jumping to the next galaxy in the list
- e. Quit
+ 5) Quit
    * exiting the program
    * updated ellipse info would not be saved
    * ask user if he/she wants to save the newly added regions
@@ -229,24 +229,24 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
 
 ### Region
 
- a. Undo
+ 1) Undo
    * Remove the last added region  
    * Only works on common regions (all-bands, green)
- b. Add ...
+ 2) Add ...
    * Add new masking regions (by left clicking to define vertices, right click to close the region)
    * Works on both common and band regions (green and magenta)
    * To switch between common and band regions, go to ''change mask'' option, under the same menu
- c. Remove one
+ 3) Remove one
    * Remove masking regions one by one (click inside the region of interest)
    * Works on both common and band regions (green and magenta)
    * To switch between common and band regions, go to ''change mask'' option, under the same menu
- d. Clean all
+ 4) Clean all
    * Remove all masking regions based on the current mask status
    * Works on both common and band regions (green and magenta)
    * To switch between common and band regions, go to ''change mask'' option, under the same menu
- e. Save
+ 5) Save
    * Saves newly added '''common''' regions
- f. Change Mask
+ 6) Change Mask
    * Switch between common and band regions
    * It is effective when a particular band is chosen
 
