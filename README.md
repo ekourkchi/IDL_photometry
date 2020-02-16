@@ -115,7 +115,7 @@ To remove all binary files in the *bin* folder, you can use the following comman
  * using `ds9` to open all fits images of the same object inside the TV
  * using `SExtracto`r to fit the ellipse to the galaxy
  * using `Pylipse`, a python program to manually fit an ellipse over the galaxy
- * Pylipse also interacts with *ds9*. *ds9* can be used as a bridge to transfer ellipse parameters between GLGA TV and Pylipse
+ * Pylipse also interacts with *ds9*. *ds9* can be used as a bridge to transfer ellipse parameters between GLGA TV and Pylipse (https://github.com/ekourkchi/Pylipse)
 
 
 
