@@ -1,7 +1,7 @@
 ## Photometry Pipeline
 
 
-![stv_preview2](https://user-images.githubusercontent.com/13570487/74598526-42f18c00-5030-11ea-84a8-50dcf856ec23.jpg  width=200)
+![stv_preview2](https://user-images.githubusercontent.com/13570487/74598526-42f18c00-5030-11ea-84a8-50dcf856ec23.jpg | width=200)
 
 
 ## SETUP 
