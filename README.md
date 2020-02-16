@@ -92,9 +92,9 @@ To remove all binary files in the *bin* folder, you can use the following comman
  * using masks for individual bands
  * using masks for all bands
  * getting bad pixels from the original image. Bad pixels must have NaN value
- * using ds9 to open all fits images of the same object inside the TV
- * using SExtractor to fit the ellipse to the galaxy
- * using Pylipse, a python program to manually fit an ellipse over the galaxy
+ * using `ds9` to open all fits images of the same object inside the TV
+ * using `SExtracto`r to fit the ellipse to the galaxy
+ * using `Pylipse`, a python program to manually fit an ellipse over the galaxy
  * Pylipse also interacts with ds9. ds9 can be used as a bridge to transfer ellipse parameters between GLGA TV and Pylipse
 
 
@@ -123,14 +123,14 @@ To remove all binary files in the *bin* folder, you can use the following comman
   * green circles: new selected point sources
   * *Thick dashed sky blue open regions*: These are the optional regions to measure the background value. When they are defined, the elliptical annulus turns into yellow. 
   * *Dash-dotted peach-color open region*: If defined `(Menu > SExtractor > Use-Mask)`, SExtractor only uses this area for measurements. It is useful when half of the image is missing and only the area around the galaxy is useful.
-  * *Dash-dotted green open region*: If defined `(Menu > SExtractor > Force-Mask)`, SExtractor does not filter this area for measurements. It is useful for instance when a masked spike divides a galaxy into two halves. We do not want SExtractor fits a separate ellipse for each half.
+  * *Dash-dotted green open region*: If defined `(Menu > SExtractor > Force-Mask)`, SExtractor does not filter this area for measurements. It is useful for instance when a masked spike divides a galaxy into two halves. We do not want *SExtractor* fits a separate ellipse for each half.
   * *Green filled regions*: these are the masks used for all bands (i.e. common-masks)
   * *Magenta  filled regions*: these are the masks used for each individual mask (i.e. band-masks)
 
  * **Notes:**
   * Background estimation regions are always blue
   * Ellipse aperture/annulus are displayed with dotted lines
-  * SExtractor related regions are displayed with dash-dotted
+  * *SExtractor* related regions are displayed with dash-dotted
   * Background related regions are displayed with dashed lines
 
 ## Control Panel
@@ -182,7 +182,7 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
 
  13: Export Ellipse: To update the ellipse in ds9 when it's open. If you have already opened ds9, but you have edited the ellipse in the TV, use this action to export the TV ellipse to ds9. Note: ds9 can also be used a bridge between Pylipes (i.e. the python code to modify the ellipse) and GLGA TV. To export an ellipse from TV to Pylipse, you can re-open Pylipse (in `TV: Menu > Pylipse > Open`)
 
- 14: Run SExtractor: Running SExtractor to update the ellipse information. If SExtractor has been already run and the information exists in the data-base, the GUI asks whether to use the previous results, or run SExtractor again. Note: one can run SExtractor automatically for the entire data-base, and if there is any adjustment needed, it is possible to re-run it in the TV. In this case, TV first creates a temporary masked image (applying both band-mask and common-mask files) and then runs SExtractor. This way one can take care of any foreground/background problems that could have been already resolved. Also there are other masking options just to run SExtractor (see: menu > SExtractor)
+ 14: Run *SExtractor*: Running *SExtractor* to update the ellipse information. If *SExtractor* has been already run and the information exists in the data-base, the GUI asks whether to use the previous results, or run *SExtractor* again. Note: one can run *SExtractor* automatically for the entire data-base, and if there is any adjustment needed, it is possible to re-run it in the TV. In this case, TV first creates a temporary masked image (applying both band-mask and common-mask files) and then runs *SExtractor*. This way one can take care of any foreground/background problems that could have been already resolved. Also there are other masking options just to run *SExtractor* (see: `menu > SExtractor`)
 
  15: Edit Ellipse: Editing the ellipse parameter in the TV. To see all the options, look at the terminal and follow the right commands. Note: if in the middle of the editing, user clicks on any button on the control-panel, the ellipse editing action would be ignored and the new command would be run.
 
@@ -301,33 +301,33 @@ For all the buttons, you have a counterpart on the menu bar, but the opposite is
 ### SExtractor
 
  1) Run
-   * Run SEWxtractor on the fits images of the current band
+   * Run *SExtractor* on the fits images of the current band
    * If TV is in the composite image mode, the main fits file (use-file) would be used
-   * If SExtractor has been previously run, this asks the user to either use the existing results, or re-run SExtractor
-   * Sometimes, masking the image helps SExtractor to fit a better ellipse
-   * If users chooses to re-run SExtractor, a temporary fits image would be created, which includes all the common-/band- masks and the SExtractor uses that file to extract the ellipse paramters
-   * Note: if the image is large, this process may take time. A large temporary file needs to be prepared for SExtractor, and SExtracting also takes time
+   * If *SExtractor* has been previously run, this asks the user to either use the existing results, or re-run *SExtractor*
+   * Sometimes, masking the image helps *SExtractor* to fit a better ellipse
+   * If users chooses to re-run *SExtractor*, a temporary fits image would be created, which includes all the common-/band- masks and the *SExtractor* uses that file to extract the ellipse paramters
+   * Note: if the image is large, this process may take time. A large temporary file needs to be prepared for *SExtractor*, and SExtracting also takes time
  2) Segmentation
-   * This would display the Segmentation image that is produced by SExtractor. If this is not available, you need to run SExtractor first.
+   * This would display the Segmentation image that is produced by *SExtractor*. If this is not available, you need to run *SExtractor* first.
  3) Masked Image
    * This would display the temporary masked region that has been already used in this session
  4) Region on
-   * This would turn on all the fitted ellipses by SExtractor. To see them, you need to open ds9
+   * This would turn on all the fitted ellipses by *SExtractor*. To see them, you need to open ds9
    * Segmentation, Maksed Image, TV Image can be used in ds9 to see these regions
  5) Region off
    * This would turn off all regions previously openned in all ds9 windows
  6) Use-Mask
-   * User can define a regions to be specifically used by SExtractor in this session
-   * When TV starts, all previous SExtractor regions would be deleted, so this region is only valid in the current session
-   * The rest of the image would be totally masked for SExtractor in the process of making the temporary file
+   * User can define a regions to be specifically used by *SExtractor* in this session
+   * When TV starts, all previous *SExtractor* regions would be deleted, so this region is only valid in the current session
+   * The rest of the image would be totally masked for *SExtractor* in the process of making the temporary file
    * The un-maksed defined region, then later would be masked by common/band/centroid masks
  7) Force-Mask
-   * User can define regions to be specifically used by SExtractor in this session
+   * User can define regions to be specifically used by *SExtractor* in this session
    * This mask would not be affected by any other common/band/centeroid masks
-   * For example, this is useful when a spike cuts a galaxy in to two halves and we do not want SExtractor fits two separates ellipses for one single object
+   * For example, this is useful when a spike cuts a galaxy in to two halves and we do not want *SExtractor* fits two separates ellipses for one single object
  8) Clear-Mask
    * Clear both Use-Mask and Force-Mask in the current session
-   * If you don't clear these masks, they would be removed on the next run, because users are expected to run SExtractor only a few times to find the proper ellipse
+   * If you don't clear these masks, they would be removed on the next run, because users are expected to run *SExtractor* only a few times to find the proper ellipse
    * Once a good ellipse is found, no more messing up with its parameters
 
 ### Pylipse
