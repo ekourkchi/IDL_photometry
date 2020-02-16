@@ -55,11 +55,11 @@ This is what you may have in "*glgapro*" folder:
             014D  029D  044D  059D  074D  089D  104D  119D  134D  149D  164D  179D  194D  209D  224D  239D  254D  269D  284D  299D  314D  329D  344D  359D
 
 
-4. Make sure you have '''awk''', '''ds9''' and '''SExtractor''' already installed to be able to use all the features of the program.
+4. Make sure you have **awk**, **ds9** and **SExtractor** already installed to be able to use all the features of the program.
 
-5. In order to use "Python" features, you need to have the following python libraries. Other libraries may have been also used.
+5. In order to use *Python* features, you need to have the following python libraries. Other libraries may have been also used.
 
-{{{
+
  - numpy
  - pylab
  - matplotlib
@@ -67,12 +67,12 @@ This is what you may have in "*glgapro*" folder:
  - mpl_toolkits
  - optparse
  - PIL
-}}}
 
-6. Most often the provided executable files in ''bin'' folder should work on Linux systems. However you can recompile them in other systems. In '''glgapro''' folder, where ''Makefile'' exists, run the following command to regenerate executable binary files.
-{{{
-$ make all
-}}}
+
+6. Most often the provided executable files in *bin* folder should work on Linux systems. However you can recompile them in other systems. In *glgapro* folder, where **Makefile** exists, run the following command to regenerate executable binary files.
+
+            $ make all
+
 
 You need to have '''cfitsio''' installed before running making binary files. `cfitsio` is a C libaray to interact with fits files in C/C++ programs.
 
