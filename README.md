@@ -20,7 +20,7 @@ This is what you may have in "*glgapro*" folder:
  * bin          > binary files
  * coyote 
  * cpp          > C programs (compiled binary files in bin folder)
- * dust         > necessary files to calculate extinction *(email me to request for these files)*
+ * dust         > necessary files to calculate extinction *(email me to get these large files)*
  * extra
  * documents    > dcumentations and manual
  * idlpro       > all glga IDL clodes
