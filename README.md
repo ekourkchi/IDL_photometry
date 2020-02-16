@@ -105,8 +105,8 @@ To remove all binary files in the *bin* folder, you can use the following comman
   * Double-click: re-centering the ellipse
   * Left-Click: choosing the vertices of a Region Of Interest (ROI)
   * Right-Click: 
-    a) enclosing a region of interest, when choosing a Region Of Interest (ROI)
-    b) repeating the highly demanding actions, which are
+  a) enclosing a region of interest, when choosing a Region Of Interest (ROI)
+  b) repeating the highly demanding actions, which are
       1. 'c' adding/editing centeroid
       2. 'd' deleting centeroids
       3. 'r' adding regions (masks)
