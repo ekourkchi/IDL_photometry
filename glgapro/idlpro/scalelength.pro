@@ -1,18 +1,15 @@
-
-
-
 Pro scalelength
 
 
 
 
-pathtoprofile = '/home/ehsan/db_esn/Luca/data/298D/photometry'
-id = 'ALPHAZOA'
-fpath = '/home/ehsan/db_esn/Luca/data/298D/acs/fits/'
+pathtoprofile = '/home/ehsan/db_esn/NGC6684/raw/data/282D/photometry'
+id = 'NGC6684'
+fpath = '/home/ehsan/db_esn/NGC6684/raw/data/282D/acs/fits/'
 intfile=fpath+id+'_I.fits'
-outpath = '/home/ehsan/db_esn/Luca/data/298D/plots/'
+outpath = '/home/ehsan/db_esn/NGC6684/raw/data/282D/plots/'
 filename=outpath+id+'_acs_profile.esn.ps'
-jpgpath='/home/ehsan/db_esn/Luca/data/298D/acs/jpg'
+jpgpath='/home/ehsan/db_esn/NGC6684/raw/data/282D/acs/jpg'
 
 bands = ['V', 'I']
 nband = n_elements(bands)
@@ -192,8 +189,8 @@ Mu = uann_mu[ind]
 Mu_e = uann_mu_e[ind]
 
 ; Specifying Ra range 
-Ra_min = 0.05
-Ra_max = 0.25
+Ra_min = 0.8
+Ra_max = 1.2
 
 ind = where(Ra gt Ra_min and Ra lt Ra_max)
 Ra = Ra[ind]
@@ -204,7 +201,7 @@ line_u = LINFIT(Ra, Mu, MEASURE_ERRORS=Mu_e)
 
 Mu_0 = line_u[0]
 beta = line_u[1]
-Xu = [0.,0.8]
+Xu = [0.,2]
 Yu = beta*Xu+Mu_0
 
 
@@ -221,8 +218,8 @@ Mu = gann_mu[ind]
 Mu_e = gann_mu_e[ind]
 
 ; Specifying Ra range 
-Ra_min = 0.05
-Ra_max = 0.25
+Ra_min = 0.8
+Ra_max = 1.2
 
 ind = where(Ra gt Ra_min and Ra lt Ra_max)
 Ra = Ra[ind]
@@ -233,7 +230,7 @@ line_g = LINFIT(Ra, Mu, MEASURE_ERRORS=Mu_e)
 
 Mu_0 = line_g[0]
 beta = line_g[1]
-Xg = [0.,0.8]
+Xg = [0.,2]
 Yg = beta*Xg+Mu_0
 
 
@@ -284,7 +281,7 @@ endif
  oplot,[r_ap,r_ap]/60.,[max+2.,min-2.],thick=4,color=!brown, linestyle=5
  xx = r_ap/60. - abs(!x.crange[1]-!x.crange[0])*0.09
  yy = !y.crange[1] + abs(!y.crange[0]-!y.crange[1])*0.1
- xyouts,0.45,24,'APERTURE',color=!brown,charsiz=0.8, orientation=90
+ xyouts,1.0,25,'APERTURE',color=!brown,charsiz=0.8, orientation=90
 
 legend,['F606W','F814W'],textcolors=cs[[b0,b1]],/bot,/left, $
 	box=0, charsize=1.0
@@ -295,7 +292,7 @@ oplot, Xg,Yg, linestyle = 1
 oplot, [Ra_min, Ra_min],[27,26.5],color=50
 oplot, [Ra_max, Ra_max],[27,26.5],color=50
 oplot, [Ra_min, Ra_max],[26.75,26.75],color=50
-xyouts,0.1,26.5,'Fitting Range',color=50,charsiz=0.7
+xyouts,0.70,26,'Fitting Range',color=50,charsiz=0.7
 
 c = 2.5*alog10(exp(1.))
 Mu_0_u = line_u[0]

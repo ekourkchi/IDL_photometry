@@ -361,7 +361,9 @@ if not nogband then $
  yy = !y.crange[1] + abs(!y.crange[0]-!y.crange[1])*0.1
  xyouts,xx,yy,'APR',color=!red,charsiz=0.8
 
-legend,bands[[b0,b1]],textcolors=cs[[b0,b1]],/bot,/left, $
+ 
+
+legend,band_texts[[b0,b1]],textcolors=cs[[b0,b1]],/bot,/left, $
 	box=0, charsize=1.0
 
 ; annular surface brightness log x-axis
@@ -405,29 +407,30 @@ a_u  = glga_getextin(ebv,'u',yuan13=yuan13)
 a_g  = glga_getextin(ebv,'g',yuan13=yuan13)
 
 
+band_texts = ['F606W', 'F814W']
 
-xyouts,25,80,'APR:  m('+bands[b0]+') = ' + $
+xyouts,25,80,'APR:  m('+band_texts[b0]+') = ' + $
  strn(uaf_mag>0.<99.,format='(f5.2)')+' '+greek("plus_minus", /append)+$
  ' '+strn(uaf_mag_e>0.01,format='(F4.2)')
 
-xyouts,25,70,'APR:  m('+bands[b1]+') = ' + $
+xyouts,25,70,'APR:  m('+band_texts[b1]+') = ' + $
  strn(gaf_mag>0.<99.,format='(f5.2)')+' '+greek("plus_minus", /append)+$
  ' '+strn(gaf_mag_e>0.01,format='(F4.2)')
 
 
-xyouts,50,80,'ASY:  m('+bands[b0]+') = ' + $
+xyouts,50,80,'ASY:  m('+band_texts[b0]+') = ' + $
  strn(usymag>0.<99.,format='(f5.2)')+' '+greek("plus_minus", /append)+$
  ' '+strn(usymag_e>0.01,format='(F4.2)') + $
  '  R!da!n = '+strn(usyma/60.,format='(f8.2)')+"'"
 
-xyouts,50,70,'ASY:  m('+bands[b1]+') = ' + $
+xyouts,50,70,'ASY:  m('+band_texts[b1]+') = ' + $
  strn(gsymag>0.<99.,format='(f5.2)')+' '+greek("plus_minus", /append)+$
  ' '+strn(gsymag_e>0.01,format='(F4.2)') + $
  '  R!da!n = '+strn(gsyma/60.,format='(f8.2)')+"'"
 
 opcolor=((uaf_mag-a_u)-(gaf_mag-a_g))>(-99.)<99.
 err=sqrt(uaf_mag_e^2 + gaf_mag_e^2)>0.01<9.
-xyouts,25,30,'APR:  ('+bands[b0]+'-'+bands[b1]+')!d0!n = '+$
+xyouts,25,30,'APR:  ('+band_texts[b0]+'-'+band_texts[b1]+')!d0!n = '+$
  strn(opcolor,format='(f5.2)') + $
  ' '+greek("plus_minus", /append)+' '+strn(err,$
  format='(F4.2)')
@@ -462,10 +465,10 @@ xyouts,25,30,'APR:  ('+bands[b0]+'-'+bands[b1]+')!d0!n = '+$
 ; xyouts,83,60,'GAL A!d'+bands[b1]+'!n:  '+strn(A_g,format='(f5.3)')
 
 
-xyouts,83,20,greek('mu',/append)+'!DBG!N '+bands[b1]+':  ' + $
- strn(gmu_bg>0.<99.,format='(f8.2)') + $
- ' '+greek("plus_minus", /append)+' '+strn(gmu_bg_e>0.<99.,format='(F8.2)')
- 
+; ; xyouts,83,20,greek('mu',/append)+'!DBG!N '+bands[b1]+':  ' + $
+; ;  strn(gmu_bg>0.<99.,format='(f8.2)') + $
+; ;  ' '+greek("plus_minus", /append)+' '+strn(gmu_bg_e>0.<99.,format='(F8.2)')
+; ;  
 
 xyouts,83,3,systime(),charsize=.7
 
@@ -658,9 +661,9 @@ ms_ps_end
 
 p=outpath+'/'
 name=id+'_acs_images'
-spawn,'convert +matte -density 196 -resample 72 -rotate -90 '+p+name+'.ps '+p+name+'.jpg'
+; spawn,'convert +matte -density 196 -resample 72 -rotate -90 '+p+name+'.ps '+p+name+'.jpg'
 spawn,'ps2pdf14 '+p+name+'.ps '+p+name+'.pdf'
-spawn,'rm '+p+name+'.ps'
+; spawn,'rm '+p+name+'.ps'
 
 if keyword_set(verbose) then $
 	print,'Done.'

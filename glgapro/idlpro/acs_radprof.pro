@@ -233,7 +233,7 @@ endif
  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  ; establish sky annuli sizes
 
- minskywid = 5. / as_pix	; 27 arcsec is minimum sky width
+ minskywid = 27. / as_pix	; 27 arcsec is minimum sky width
  factor= 1.5     ;  1.5
  skyinner=factor*semimajor
  skyouter=(skyinner+minskywid) ;semimajor*sqrt(1+factor^2) > (skyinner+minskywid)  

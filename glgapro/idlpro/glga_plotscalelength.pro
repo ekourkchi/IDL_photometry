@@ -53,6 +53,9 @@ endelse
 	if band eq 'w3' or band eq 'w4' then begin
 		sbran = [13.+sbdel, 13.]
 	endif
+	if band eq 'V' or band eq 'I' then begin
+		sbran = [17.+sbdel, 20.]
+	endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; set some useful values to
@@ -221,9 +224,13 @@ if ngood le 0 then $
 yrng = sbran
 xrng = [min([min(a/60.)-(max(a/60.)*.05),0.]), max(a/60.)*1.025]
 
+band_txt = band
+if band eq 'V' then band_txt = 'F606W'
+if band eq 'I' then band_txt = 'F814W'
+
 plot,[a/60],[ann_mu],yr=yrng,/ys,/nodata,$
 	xr = xrng, /xs,xtit='R!da!n [arcmin]', $ ;/xlog,$
-	ytit=greek('mu',/append)+'!D'+band+'!N [AB mag/arcsec!u2!n]'
+	ytit=greek('mu',/append)+'!D'+band_txt+'!N [AB mag/arcsec!u2!n]'
 
 if ar50 ge 0 then begin
 	oplot,[xrng[0],ar50/60],[mu50,mu50],color=cs[1],linesty=0
@@ -262,8 +269,8 @@ oplot,[semimajor/60,semimajor/60],[yrng[1],yrng[1]+3.],color=cs[5],linesty=0
 ; oplot, Xu/60.,Yu, linestyle = 2, color=cgcolor('brown')
 
 
-Ra_min = ar50
-ind = where(a ge Ra_min and ann_mu le 25.5)
+Ra_min = 29.0 ;ar50
+ind = where(a ge Ra_min and ann_mu le 30.0)
 Ra   = a[ind]
 Mu   = ann_mu[ind]
 Mu_e = ann_mu_e[ind]
@@ -310,7 +317,7 @@ mag_i = []
 
 if n_elements(ann_mu) ge 2 and n_elements(ann_mu) eq n_elements(a) and n_elements(ann_mu) eq n_elements(tot_mag) then begin
     for i=0, n_elements(ann_mu)-2 do begin
-       if ann_mu[i] le 25.5 and ann_mu[i+1] gt 25.5 then begin 
+       if ann_mu[i] le 29.0 and ann_mu[i+1] gt 29.0 then begin 
             mu_i=[ann_mu[i],ann_mu[i+1]]
             a_i = [a[i],a[i+1]]
             mag_i = [tot_mag[i], tot_mag[i+1]]
@@ -322,7 +329,7 @@ endif
 
 
 if n_i gt 0 then begin 
-    linterp,mu_i,a_i,25.5,ar255 
+    linterp,mu_i,a_i,28.,ar255   ; 29.0
     linterp,a_i,mag_i,ar255, mag255
 endif else begin 
     ar255=-9.99
@@ -355,7 +362,7 @@ endelse
 
 
 if Mu_0 gt 0 then begin
-    delta_n = (25.5-Mu_0)/c
+    delta_n = (29.0-Mu_0)/c
     delta_m_ext = 2.5*alog10(1.-(1.+delta_n)*exp(-1.*delta_n))
 endif else begin
     delta_n  = -9.99
@@ -454,8 +461,8 @@ else	outstr = 'Concentration (C82) = '+ $
 xyouts,30,y0-del*4.,outstr
 
 if mag255 lt 0. or grade gt 2 then $
-	outstr = 'm!d25.5!n = -9.99   ' $
-else	outstr = 'm!d25.5!n = ' + strn(mag255>0.,format='(f5.2)')+' [mag]'
+	outstr = 'm!d29.0!n = -9.99   ' $
+else	outstr = 'm!d29.0!n = ' + strn(mag255>0.,format='(f5.2)')+' [mag]'
 xyouts,30,y0-5.*del,outstr
 
 
@@ -464,9 +471,9 @@ xyouts,30,y0-7.*del,'Disk Scale Length h = '+string(h,format='(F6.2)')+"'"
 xyouts,30,y0-8.*del,greek("Delta",/append)+'m!dext!n = '+string(delta_m_ext,format='(F10.4)')+' [mag]'
 
 if (mag255 gt 0. and delta_m_ext gt -2) then $ 
-       xyouts,30,y0-9.*del,'m!dtotal!n = m!d25.5!n + '+ greek("Delta",/append)+'m!dext!n = '+string(delta_m_ext+mag255,format='(F10.2)')+' [mag]'
+       xyouts,30,y0-9.*del,'m!dtotal!n = m!d29.0!n + '+ greek("Delta",/append)+'m!dext!n = '+string(delta_m_ext+mag255,format='(F10.2)')+' [mag]'
 
-xyouts,78,y0-del*5.,'R!d25.5!n = '+string(ar255/60.,format='(F6.2)')+"'"
+xyouts,78,y0-del*5.,'R!d29.0!n = '+string(ar255/60.,format='(F6.2)')+"'"
 
 xyouts,78,y0, 'R!dASY!n = '+string(asyma/60.,format='(F6.2)')+"'"
 xyouts,78,y0-del*1., 'R!d90!n = '+string(ar90/60.,format='(F6.2)')+"'"
@@ -512,13 +519,13 @@ if not keyword_set(pathtoprofile) then pathtoprofile="./"
 outfile=pathtoprofile+'/'+id+'_'+band+'.scales.dat'
 openw,lun,outfile,/get_lun
 printf,lun,'# ID   : '+id
-printf,lun,'# Band : '+band
+printf,lun,'# Band : '+band_txt
 printf,lun,'# RA [deg]: '+rastr
 printf,lun,'# Dec [deg]: '+decstr
 printf,lun,'# Lon. [Galactic deg]: '+lonstr
 printf,lun,'# Lat. [Galactic deg]: '+latstr
 printf,lun,'# GAL E(B-V): '+strn(ebv,format='(f5.3)')
-printf,lun,'# Extinction GAL A_'+band+': '+strn(a_gal,format='(f5.3)')
+; printf,lun,'# Extinction GAL A_'+band+': '+strn(a_gal,format='(f5.3)')
 printf,lun,'# Semi-Major [arcmin]: '+strn(semimajor/60.,format='(f6.2)')
 printf,lun,'# Ratio (a/b): '+strn(semimajor/semiminor,format='(f6.2)')
 printf,lun,'# P.A. [deg]: '+strn(pa,format='(f6.2)')
@@ -528,7 +535,7 @@ printf,lun,'# Central Surface Brightness mu_0: '+strn(mu_00>0.,format='(f6.3)')
 printf,lun,'# 90% mu_90: '+strn(mu90>0.,format='(f6.3)')
 printf,lun,'# 50% mu_50: '+strn(mu50>0.,format='(f6.3)')
 printf,lun,'# Concentration (C82): '+strn((ar80/ar20)>0.,format='(f6.2)')
-printf,lun,'# Magnitude within R_25.5 (m_25.5): '+strn(mag255>0.,format='(f6.3)')
+printf,lun,'# Magnitude within R_29.0 (m_29.0): '+strn(mag255>0.,format='(f6.3)')
 printf,lun,'# Disk mu_0: '+string(Mu_0,format='(F6.3)')
 printf,lun,'# Disk Scale Length h [arcmin]: '+string(h,format='(F6.2)')
 printf,lun,'# Magnitude correction based on disk extrapolation (delta_m_ext): '+string(delta_m_ext,format='(F10.4)')
@@ -537,7 +544,7 @@ printf,lun,'# R_90%  [arcmin]: '+string(ar90/60.,format='(F6.2)')
 printf,lun,'# R_80%  [arcmin]: '+string(ar80/60.,format='(F6.2)')
 printf,lun,'# R_50%  [arcmin]: '+string(ar50/60.,format='(F6.2)')
 printf,lun,'# R_20%  [arcmin]: '+string(ar20/60.,format='(F6.2)')
-printf,lun,'# R_25.5 [arcmin]: '+string(ar255/60.,format='(F6.2)')
+printf,lun,'# R_29.0 [arcmin]: '+string(ar255/60.,format='(F6.2)')
 printf,lun,'# Note: All magnitudes are raw and should be de-reddened.'
 printf,lun,'# Date : '+systime()
 printf,lun,'# '

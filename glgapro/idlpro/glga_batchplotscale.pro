@@ -1,6 +1,6 @@
 pro glga_batchplotscale, lfile, ra=ra, galex=galex,sdss=sdss,twomass=twomass,$
 	wise=wise,irac=irac, $
-	outpath=outpath, verbose=verbose
+	outpath=outpath, verbose=verbose, acs=acs 
 ;+
 ; glga_batchplotscale - plot per band radial profile photometry and images
 ;	of objects in lfile
@@ -34,6 +34,13 @@ if keyword_set(irac) then begin
 	bands = ['3p6um','4p5um']
 	srvy='irac'
 endif
+if keyword_set(acs) then begin
+	bands = ['V','I']
+	srvy='acs'
+endif
+
+
+
 nbands = n_elements(bands)
 
 

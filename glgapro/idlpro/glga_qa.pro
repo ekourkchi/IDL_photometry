@@ -292,6 +292,8 @@ for i=i0, nloop-1 do begin
 	if nopfile and noafile then begin
 		qa.error = 1
 		if keyword_set(verbose) then $
+                        PRINT, pfile
+                        print, afile
 			print,'No images, skipping'
 		goto,skiperr
 	endif else qa.error = 0
@@ -762,7 +764,7 @@ ellipse_glga_file = [0.5*d[i]/as_pix, 0.5*(d[i]/rat[i]/as_pix), xn, yn, $
 		        
 		        bandmaskimgfile=auxpath+id[i]+'_'+srvy+'_mask_'+bands[j]+'.fits.gz'
 		        
-		        glga_plotradprof, id[i], bands[j], type=type[i], $
+		        acs_plotradprof, id[i], bands[j], type=type[i], $
                            survey=strupcase(srvy), pathtoprofile=photpath, $
                            intfile=fpath+id[i]+'_'+bands[j]+'.fit*', $
                            maskimgfile=maskimgfile, bandmaskimgfile=bandmaskimgfile, outpath=plotpath, $
