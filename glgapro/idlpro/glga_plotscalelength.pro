@@ -54,7 +54,7 @@ endelse
 		sbran = [13.+sbdel, 13.]
 	endif
 	if band eq 'V' or band eq 'I' then begin
-		sbran = [17.+sbdel, 20.]
+		sbran = [14.+sbdel, 14.]
 	endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -269,8 +269,8 @@ oplot,[semimajor/60,semimajor/60],[yrng[1],yrng[1]+3.],color=cs[5],linesty=0
 ; oplot, Xu/60.,Yu, linestyle = 2, color=cgcolor('brown')
 
 
-Ra_min = 29.0 ;ar50
-ind = where(a ge Ra_min and ann_mu le 30.0)
+Ra_min = ar50
+ind = where(a ge Ra_min and ann_mu le 25.0)
 Ra   = a[ind]
 Mu   = ann_mu[ind]
 Mu_e = ann_mu_e[ind]
@@ -317,7 +317,7 @@ mag_i = []
 
 if n_elements(ann_mu) ge 2 and n_elements(ann_mu) eq n_elements(a) and n_elements(ann_mu) eq n_elements(tot_mag) then begin
     for i=0, n_elements(ann_mu)-2 do begin
-       if ann_mu[i] le 29.0 and ann_mu[i+1] gt 29.0 then begin 
+       if ann_mu[i] le 25.0 and ann_mu[i+1] gt 25.0 then begin 
             mu_i=[ann_mu[i],ann_mu[i+1]]
             a_i = [a[i],a[i+1]]
             mag_i = [tot_mag[i], tot_mag[i+1]]
@@ -329,7 +329,7 @@ endif
 
 
 if n_i gt 0 then begin 
-    linterp,mu_i,a_i,28.,ar255   ; 29.0
+    linterp,mu_i,a_i,25.0,ar255   ; 25.0
     linterp,a_i,mag_i,ar255, mag255
 endif else begin 
     ar255=-9.99
@@ -362,7 +362,7 @@ endelse
 
 
 if Mu_0 gt 0 then begin
-    delta_n = (29.0-Mu_0)/c
+    delta_n = (25.0-Mu_0)/c
     delta_m_ext = 2.5*alog10(1.-(1.+delta_n)*exp(-1.*delta_n))
 endif else begin
     delta_n  = -9.99
@@ -394,8 +394,8 @@ if a_gal lt 1.e-3 then a_gal = 0.
 chw = 1.24
 xyouts,0,95,id,charsi=1.5
 if strlen(srv) gt 0 then $
-	xyouts,0,85,srv+' '+band,charsi=1.25 $
-else	xyouts,0,85,band,charsi=1.25
+	xyouts,0,85,srv+' '+band_txt,charsi=1.25 $
+else	xyouts,0,85,band_txt,charsi=1.25
 rastr = strtrim(strn(ra_cen,format='(f12.6)'),2)
 decstr = strtrim(strn(dec_cen,format='(f12.6)'),2)
 nrachr = strlen(rastr)
@@ -420,7 +420,7 @@ xyouts,71+off,85,latstr
 y0 = 70
 del = 9
 xyouts,0,y0,'GAL E(B-V):  '+strn(ebv,format='(f5.3)')
-xyouts,0,y0-del,'GAL A!d'+band+'!n:  '+strn(a_gal,format='(f5.3)')
+; xyouts,0,y0-del,'GAL A!d'+band+'!n:  '+strn(a_gal,format='(f5.3)')
 xyouts,0,y0-del*2.,"SEMIMAJOR:  "+strn(semimajor/60.,format='(f6.2)')+"'"
  
 xyouts,0,y0-del*3.,'RATIO (a/b):  '+strn(semimajor/semiminor,format='(f6.2)')
@@ -461,8 +461,8 @@ else	outstr = 'Concentration (C82) = '+ $
 xyouts,30,y0-del*4.,outstr
 
 if mag255 lt 0. or grade gt 2 then $
-	outstr = 'm!d29.0!n = -9.99   ' $
-else	outstr = 'm!d29.0!n = ' + strn(mag255>0.,format='(f5.2)')+' [mag]'
+	outstr = 'm!d25.0!n = -9.99   ' $
+else	outstr = 'm!d25.0!n = ' + strn(mag255>0.,format='(f5.2)')+' [mag]'
 xyouts,30,y0-5.*del,outstr
 
 
@@ -471,9 +471,9 @@ xyouts,30,y0-7.*del,'Disk Scale Length h = '+string(h,format='(F6.2)')+"'"
 xyouts,30,y0-8.*del,greek("Delta",/append)+'m!dext!n = '+string(delta_m_ext,format='(F10.4)')+' [mag]'
 
 if (mag255 gt 0. and delta_m_ext gt -2) then $ 
-       xyouts,30,y0-9.*del,'m!dtotal!n = m!d29.0!n + '+ greek("Delta",/append)+'m!dext!n = '+string(delta_m_ext+mag255,format='(F10.2)')+' [mag]'
+       xyouts,30,y0-9.*del,'m!dtotal!n = m!d25.0!n + '+ greek("Delta",/append)+'m!dext!n = '+string(delta_m_ext+mag255,format='(F10.2)')+' [mag]'
 
-xyouts,78,y0-del*5.,'R!d29.0!n = '+string(ar255/60.,format='(F6.2)')+"'"
+xyouts,78,y0-del*5.,'R!d25.0!n = '+string(ar255/60.,format='(F6.2)')+"'"
 
 xyouts,78,y0, 'R!dASY!n = '+string(asyma/60.,format='(F6.2)')+"'"
 xyouts,78,y0-del*1., 'R!d90!n = '+string(ar90/60.,format='(F6.2)')+"'"
@@ -535,7 +535,7 @@ printf,lun,'# Central Surface Brightness mu_0: '+strn(mu_00>0.,format='(f6.3)')
 printf,lun,'# 90% mu_90: '+strn(mu90>0.,format='(f6.3)')
 printf,lun,'# 50% mu_50: '+strn(mu50>0.,format='(f6.3)')
 printf,lun,'# Concentration (C82): '+strn((ar80/ar20)>0.,format='(f6.2)')
-printf,lun,'# Magnitude within R_29.0 (m_29.0): '+strn(mag255>0.,format='(f6.3)')
+printf,lun,'# Magnitude within R_25.0 (m_25.0): '+strn(mag255>0.,format='(f6.3)')
 printf,lun,'# Disk mu_0: '+string(Mu_0,format='(F6.3)')
 printf,lun,'# Disk Scale Length h [arcmin]: '+string(h,format='(F6.2)')
 printf,lun,'# Magnitude correction based on disk extrapolation (delta_m_ext): '+string(delta_m_ext,format='(F10.4)')
@@ -544,7 +544,7 @@ printf,lun,'# R_90%  [arcmin]: '+string(ar90/60.,format='(F6.2)')
 printf,lun,'# R_80%  [arcmin]: '+string(ar80/60.,format='(F6.2)')
 printf,lun,'# R_50%  [arcmin]: '+string(ar50/60.,format='(F6.2)')
 printf,lun,'# R_20%  [arcmin]: '+string(ar20/60.,format='(F6.2)')
-printf,lun,'# R_29.0 [arcmin]: '+string(ar255/60.,format='(F6.2)')
+printf,lun,'# R_25.0 [arcmin]: '+string(ar255/60.,format='(F6.2)')
 printf,lun,'# Note: All magnitudes are raw and should be de-reddened.'
 printf,lun,'# Date : '+systime()
 printf,lun,'# '

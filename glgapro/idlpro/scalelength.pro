@@ -1,3 +1,6 @@
+
+
+
 Pro scalelength
 
 
@@ -189,8 +192,8 @@ Mu = uann_mu[ind]
 Mu_e = uann_mu_e[ind]
 
 ; Specifying Ra range 
-Ra_min = 0.8
-Ra_max = 1.2
+Ra_min = 0.7
+Ra_max = 0.9
 
 ind = where(Ra gt Ra_min and Ra lt Ra_max)
 Ra = Ra[ind]
@@ -218,8 +221,8 @@ Mu = gann_mu[ind]
 Mu_e = gann_mu_e[ind]
 
 ; Specifying Ra range 
-Ra_min = 0.8
-Ra_max = 1.2
+Ra_min = 0.7
+Ra_max = 0.9
 
 ind = where(Ra gt Ra_min and Ra lt Ra_max)
 Ra = Ra[ind]

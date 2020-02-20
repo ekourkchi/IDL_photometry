@@ -157,7 +157,7 @@ if file_test(xdjpgfile) then begin
 
 endif else xdpic=0
 
-
+band_texts = ['F606W', 'F814W']
 udjpgfile =jpgpath+'/'+id+'_V.jpg'
 
 if file_test(udjpgfile) then begin
@@ -383,7 +383,7 @@ if not nogband then $
 
  oplot,[r_ap/60,r_ap/60],[max+0.5,min-0.5],thick=4,color=!red
 
-legend,bands[[b0,b1]],textcolors=cs[[b0,b1]],/bot,/left, $
+legend,band_texts[[b0,b1]],textcolors=cs[[b0,b1]],/bot,/left, $
 	box=0, charsize=1.0
 
 ; text
@@ -407,7 +407,7 @@ a_u  = glga_getextin(ebv,'u',yuan13=yuan13)
 a_g  = glga_getextin(ebv,'g',yuan13=yuan13)
 
 
-band_texts = ['F606W', 'F814W']
+
 
 xyouts,25,80,'APR:  m('+band_texts[b0]+') = ' + $
  strn(uaf_mag>0.<99.,format='(f5.2)')+' '+greek("plus_minus", /append)+$
@@ -418,15 +418,15 @@ xyouts,25,70,'APR:  m('+band_texts[b1]+') = ' + $
  ' '+strn(gaf_mag_e>0.01,format='(F4.2)')
 
 
-xyouts,50,80,'ASY:  m('+band_texts[b0]+') = ' + $
+xyouts,55,80,'ASY:  m('+band_texts[b0]+') = ' + $
  strn(usymag>0.<99.,format='(f5.2)')+' '+greek("plus_minus", /append)+$
  ' '+strn(usymag_e>0.01,format='(F4.2)') + $
- '  R!da!n = '+strn(usyma/60.,format='(f8.2)')+"'"
+ '    R!da!n = '+strn(usyma/60.,format='(f8.2)')+"'"
 
-xyouts,50,70,'ASY:  m('+band_texts[b1]+') = ' + $
+xyouts,55,70,'ASY:  m('+band_texts[b1]+') = ' + $
  strn(gsymag>0.<99.,format='(f5.2)')+' '+greek("plus_minus", /append)+$
  ' '+strn(gsymag_e>0.01,format='(F4.2)') + $
- '  R!da!n = '+strn(gsyma/60.,format='(f8.2)')+"'"
+ '    R!da!n = '+strn(gsyma/60.,format='(f8.2)')+"'"
 
 opcolor=((uaf_mag-a_u)-(gaf_mag-a_g))>(-99.)<99.
 err=sqrt(uaf_mag_e^2 + gaf_mag_e^2)>0.01<9.
@@ -536,7 +536,7 @@ if gdpic then begin
  ypltrng = [0-delta,delta]
  plotimage, gdimg, /preserve, charsize=chrsz, color=max(!d.n_colors), $
 	 xran=xpltrng, yran=ypltrng, imgxrange=ximgrng, imgyrange=yimgrng, $
-	 xtitle='arcmin', ytitle='arcmin', title='I'
+	 xtitle='arcmin', ytitle='arcmin', title='F814W'
 
  setplotcolors
 
@@ -557,7 +557,7 @@ if gdpic then begin
 endif else begin
 
  plot,[0,1],[0,1],/nodata,xs=4,ys=4
- xyouts,[0.32],[0.5],'No I Image',charsize=1
+ xyouts,[0.32],[0.5],'No F814W Image',charsize=1
 
 endelse
 
@@ -579,7 +579,7 @@ if udpic then begin
  ypltrng = [0-delta,delta]
  plotimage, udimg, /preserve, charsize=chrsz, color=max(!d.n_colors), $
 	 xran=xpltrng, yran=ypltrng, imgxrange=ximgrng, imgyrange=yimgrng, $
-	 xtitle='arcmin', ytitle='arcmin', title='V'
+	 xtitle='arcmin', ytitle='arcmin', title='F606W'
 
  setplotcolors
 
@@ -603,7 +603,7 @@ if udpic then begin
 endif else begin
 
  plot,[0,1],[0,1],/nodata,xs=4,ys=4
- xyouts,[0.32],[0.5],'No V Image',charsize=1
+ xyouts,[0.32],[0.5],'No F606W Image',charsize=1
 
 endelse
 
