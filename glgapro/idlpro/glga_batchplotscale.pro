@@ -35,7 +35,7 @@ if keyword_set(irac) then begin
 	srvy='irac'
 endif
 if keyword_set(acs) then begin
-	bands = ['V','I']
+	bands = ['F606W','F814W']
 	srvy='acs'
 endif
 

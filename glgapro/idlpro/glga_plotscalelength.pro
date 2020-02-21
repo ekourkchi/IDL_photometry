@@ -53,7 +53,7 @@ endelse
 	if band eq 'w3' or band eq 'w4' then begin
 		sbran = [13.+sbdel, 13.]
 	endif
-	if band eq 'V' or band eq 'I' then begin
+	if band eq 'F606W' or band eq 'F814W' then begin
 		sbran = [14.+sbdel, 14.]
 	endif
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

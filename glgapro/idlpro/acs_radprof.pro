@@ -91,7 +91,7 @@
 ;	2008-SEP-09	M. Seibert
 ;	2009-APR-09	D. Neill
 ;	2012-MAY-31	D. Neill - fixed noise model
-;	2016-JUN-09	E. Kourkchi - added bandflag
+;	2016-JUN-09	E. Kourkchi - added bandflag, filter
 ;-
 
 pro acs_radprof, $
@@ -99,7 +99,7 @@ pro acs_radprof, $
     majordiam, minordiam, pa, $
     intfile, $
     zeropoint=zeropoint,verbose=verbose,diam_units=diam_units,$
-    ellipsefile=ellipsefile, $
+    ellipsefile=ellipsefile, filter=filter, $
     maskimgfile=maskimgfile, bandflag=bandflag, annuli_size=annuli_size, $
     extendtoskyannulus=extendtoskyannulus,$
     outpath=outpath, status=status, yuan13=yuan13
@@ -142,7 +142,11 @@ endif
  endif
  sz=size(int,/dim)
 
- band=strmid(rute,strlen(rute)-1,1)
+ if not keyword_set(filter) then begin
+     band=strmid(rute,strlen(rute)-1,1)
+ endif else begin
+     band = filter
+ endelse
 
  if keyword_set(verbose) then print, pre+'processing '+band+' data'
 

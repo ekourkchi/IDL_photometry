@@ -13,7 +13,7 @@ outpath = '/home/ehsan/db_esn/Luca/298D/plots/'
 filename=outpath+id+'_acs_image.esn.ps'
 jpgpath='/home/ehsan/db_esn/Luca/298D/acs/jpg'
 
-bands = ['V', 'I']
+bands = ['F606W','F814W']
 nband = n_elements(bands)
 
 
@@ -48,14 +48,14 @@ read_radprof,id,bands[b1], gtot_a, gtot_mag, gtot_mag_e, gann_mu, gann_mu_e, $
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; read in jpg images
 
-xdjpgfile =jpgpath+'/'+id+'_VI.jpg'
+xdjpgfile =jpgpath+'/'+id+'_color.jpg'
 
 if file_test(xdjpgfile) then begin
  read_jpeg,xdjpgfile,xdjpg,/true
  xdpic=1
 endif else xdpic=0
 
-udjpgfile =jpgpath+'/'+id+'_V.jpg'
+udjpgfile =jpgpath+'/'+id+'_F606W.jpg'
 
 if file_test(udjpgfile) then begin
  
@@ -64,7 +64,7 @@ if file_test(udjpgfile) then begin
  udimg = udjpg
 endif else udpic=0
 
-gdjpgfile =jpgpath+'/'+id+'_I.jpg'
+gdjpgfile =jpgpath+'/'+id+'_F814W.jpg'
 
 if file_test(udjpgfile) then begin
  
@@ -103,7 +103,7 @@ if gdpic then begin
  ypltrng = [0-delta,delta]
  plotimage, gdimg, /preserve, charsize=chrsz, color=max(!d.n_colors), $
 	 xran=xpltrng, yran=ypltrng, imgxrange=ximgrng, imgyrange=yimgrng, $
-	 xtitle='arcmin', ytitle='arcmin', title='I'
+	 xtitle='arcmin', ytitle='arcmin', title='F814W'
 
  setplotcolors
 
@@ -124,7 +124,7 @@ if gdpic then begin
 endif else begin
 
  plot,[0,1],[0,1],/nodata,xs=4,ys=4
- xyouts,[0.32],[0.5],'No I Image',charsize=1
+ xyouts,[0.32],[0.5],'No F814W Image',charsize=1
 
 endelse
 
@@ -147,7 +147,7 @@ if udpic then begin
  ypltrng = [0-delta,delta]
  plotimage, udimg, /preserve, charsize=chrsz, color=max(!d.n_colors), $
 	 xran=xpltrng, yran=ypltrng, imgxrange=ximgrng, imgyrange=yimgrng, $
-	 xtitle='arcmin', ytitle='arcmin', title='V'
+	 xtitle='arcmin', ytitle='arcmin', title='F606W'
 
  setplotcolors
 
@@ -155,7 +155,7 @@ if udpic then begin
 ;  tvellipse,ela[0],ela[1],ela[2],ela[3],ela[4],/data,$
 ;    linestyle=1,color=!red, thick=3
 
- print, "V:", ela
+ print, "F606W:", ela
  
  
  ratio=gsemiminor/gsemimajor
@@ -171,7 +171,7 @@ if udpic then begin
 endif else begin
 
  plot,[0,1],[0,1],/nodata,xs=4,ys=4
- xyouts,[0.32],[0.5],'No V Image',charsize=1
+ xyouts,[0.32],[0.5],'No F606W Image',charsize=1
 
 endelse
 

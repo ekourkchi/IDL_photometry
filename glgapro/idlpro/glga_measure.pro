@@ -36,7 +36,7 @@ if keyword_set(panstarrs) then begin
 	print, srvy
 endif
 if keyword_set(acs) then begin
-	bands=['V', 'I']
+	bands=['F606W','F814W']
 	srvy='acs'
 	print, bands
 	print, srvy
@@ -155,7 +155,7 @@ for i=0,n_elements(id)-1 do begin
 				mjdiam,mndiam,p, $
 				fpath+id[i]+'_'+bands[j]+'.fits*', $
 				annuli_size=annuli_size, $
-				ellipsefile=ellipsefile, $
+				ellipsefile=ellipsefile, filter=bands[j],  $
 				diam_units='arcmin', maskimgfile=maskimgfile,$
 				bandflag=bandflag, outpath=photpath,status=pstat, $
 				/verbose, /extend, /yuan13		
@@ -226,7 +226,7 @@ for i=0,n_elements(id)-1 do begin
 	        
 		acs_plotradprof, id[i], type=type[i], $
 			pathtoprofile=photpath, $
-			intfile=fpath+id[i]+'_I.fits*', $
+			intfile=fpath+id[i]+'_F814W.fits*', $
 			maskimgfile=maskimgfile, fpath=fpath, $
 			jpgpath=jpath, outpath=plotpath, /yuan13			    
 	    endif else if strpos(srvy,'2mass') ge 0 then begin

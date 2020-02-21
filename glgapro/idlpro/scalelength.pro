@@ -14,7 +14,7 @@ outpath = '/home/ehsan/db_esn/NGC6684/raw/data/282D/plots/'
 filename=outpath+id+'_acs_profile.esn.ps'
 jpgpath='/home/ehsan/db_esn/NGC6684/raw/data/282D/acs/jpg'
 
-bands = ['V', 'I']
+bands = ['F606W','F814W']
 nband = n_elements(bands)
 
 if not keyword_set(type) then typ = '-' else typ = strtrim(type,2)

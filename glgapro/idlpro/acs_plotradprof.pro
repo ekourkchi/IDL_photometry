@@ -11,7 +11,7 @@ pro acs_plotradprof, id, pathtoprofile=pathtoprofile, type=type, $
 ; is OK. 
 ;
 
-bands = ['V', 'I']
+bands = ['F606W','F814W']
 nband = n_elements(bands)
 
 if not keyword_set(type) then typ = '-' else typ = strtrim(type,2)
@@ -120,6 +120,7 @@ if keyword_set(intfile) and file_exist(intfile) then begin
  as_pix = abs(gcdelt[0])*3600.
 endif else begin
 	print,'No image data for '+id+', returning.'
+	print, 'File not found: '+intfile
 	return
 endelse
 
@@ -128,7 +129,7 @@ if keyword_set(verbose) then $
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; read in jpg images
 
-xdjpgfile =jpgpath+'/'+id+'_VI.jpg'
+xdjpgfile =jpgpath+'/'+id+'_color.jpg'
 
 if file_test(xdjpgfile) then begin
  read_jpeg,xdjpgfile,xdjpg,/true
@@ -158,7 +159,7 @@ if file_test(xdjpgfile) then begin
 endif else xdpic=0
 
 band_texts = ['F606W', 'F814W']
-udjpgfile =jpgpath+'/'+id+'_V.jpg'
+udjpgfile =jpgpath+'/'+id+'_F606W.jpg'
 
 if file_test(udjpgfile) then begin
  
@@ -170,7 +171,7 @@ if file_test(udjpgfile) then begin
  udjpgb = udjpg[2, *, *]
  
  if keyword_set(fpath) then begin
-    bandflag=fpath+id+'_V_flag.fits'
+    bandflag=fpath+id+'_F606W_flag.fits'
     if file_test(bandflag) then begin
       bmask = mrdfits(bandflag,0,header,/fscale,/silent)
       flagidx = where(bmask ge 1, nflagidx)
@@ -194,7 +195,7 @@ endif else udpic=0
 
 
 
-gdjpgfile =jpgpath+'/'+id+'_I.jpg'
+gdjpgfile =jpgpath+'/'+id+'_F606W.jpg'
 
 if file_test(udjpgfile) then begin
  
@@ -206,7 +207,7 @@ if file_test(udjpgfile) then begin
  gdjpgb = gdjpg[2, *, *]
  
  if keyword_set(fpath) then begin
-    bandflag=fpath+id+'_I_flag.fits'
+    bandflag=fpath+id+'_F814W_flag.fits'
     if file_test(bandflag) then begin
       bmask = mrdfits(bandflag,0,header,/fscale,/silent)
       flagidx = where(bmask ge 1, nflagidx)

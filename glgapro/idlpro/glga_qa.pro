@@ -81,10 +81,10 @@ endif
 if keyword_set(acs) then begin
 	srvn=6
 	asrvn = [0,3,2]
-	ptail='_V.fits*'
-	atail='_I.fits*'
-	jtail='_VI.jpg'
-	bands=['V','I']
+	ptail='_F814W.fits*'
+	atail='_F606W.fits*'
+	jtail='_color.jpg'
+	bands=['F606W','F814W']
 endif
 
 
@@ -764,12 +764,23 @@ ellipse_glga_file = [0.5*d[i]/as_pix, 0.5*(d[i]/rat[i]/as_pix), xn, yn, $
 		        
 		        bandmaskimgfile=auxpath+id[i]+'_'+srvy+'_mask_'+bands[j]+'.fits.gz'
 		        
-		        acs_plotradprof, id[i], bands[j], type=type[i], $
-                           survey=strupcase(srvy), pathtoprofile=photpath, $
-                           intfile=fpath+id[i]+'_'+bands[j]+'.fit*', $
-                           maskimgfile=maskimgfile, bandmaskimgfile=bandmaskimgfile, outpath=plotpath, $
-                           verbose=verbose, /yuan13, update=update, /rotatee
-		
+		         if srvn eq 6 then begin
+                             
+                            print, 'PLOTRADPROF: '+fpath+id[i]+'_'+bands[j]+'.fit*'
+                            acs_plotradprof, id[i], bands[j], type=type[i], $
+                               survey=strupcase(srvy), pathtoprofile=photpath, $
+                               intfile=fpath+id[i]+'_'+bands[j]+'.fit*', $
+                               maskimgfile=maskimgfile, bandmaskimgfile=bandmaskimgfile, outpath=plotpath, $
+                               verbose=verbose, /yuan13, update=update, /rotatee
+                         endif else begin
+                            glga_plotradprof, id[i], bands[j], type=type[i], $
+                               survey=strupcase(srvy), pathtoprofile=photpath, $
+                               intfile=fpath+id[i]+'_'+bands[j]+'.fit*', $
+                               maskimgfile=maskimgfile, bandmaskimgfile=bandmaskimgfile, outpath=plotpath, $
+                               verbose=verbose, /yuan13, update=update, /rotatee 
+                       
+                        endelse  
+
 		   endif
 		endfor
 		
