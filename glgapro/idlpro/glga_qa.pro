@@ -763,15 +763,15 @@ ellipse_glga_file = [0.5*d[i]/as_pix, 0.5*(d[i]/rat[i]/as_pix), xn, yn, $
 		   if file_test(fpath+id[i]+'_'+bands[j]+'.fit*') eq 1 then begin
 		        
 		        bandmaskimgfile=auxpath+id[i]+'_'+srvy+'_mask_'+bands[j]+'.fits.gz'
-		        
+		        	        
 		         if srvn eq 6 then begin
                              
                             print, 'PLOTRADPROF: '+fpath+id[i]+'_'+bands[j]+'.fit*'
-                            acs_plotradprof, id[i], bands[j], type=type[i], $
-                               survey=strupcase(srvy), pathtoprofile=photpath, $
+                            acs_plotradprof, id[i], type=type[i], $
+                               pathtoprofile=photpath, $
                                intfile=fpath+id[i]+'_'+bands[j]+'.fit*', $
-                               maskimgfile=maskimgfile, bandmaskimgfile=bandmaskimgfile, outpath=plotpath, $
-                               verbose=verbose, /yuan13, update=update, /rotatee
+                               maskimgfile=maskimgfile, outpath=plotpath, /yuan13, $
+                               jpgpath=jpath, fpath=fpath
                          endif else begin
                             glga_plotradprof, id[i], bands[j], type=type[i], $
                                survey=strupcase(srvy), pathtoprofile=photpath, $
