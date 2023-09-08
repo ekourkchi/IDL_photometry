@@ -190,6 +190,10 @@ for i=0L,nobj-1L do begin
 			x1=x0+127<(sz[0]-1)
 			y0=fix(y[i]-63.)>0
 			y1=y0+127<(sz[1]-1)
+
+			print, "prsrc size:", size(im)
+			print, x0, x1, y0, y1
+
 			radius = get_mask_radius(im[x0:x1,y0:y1], $
 				x[i]-float(x0),y[i]-float(y0),srvy)
 			psrc[*,i] = [a,d,x[i],y[i],radius,psrc_ast,2.]

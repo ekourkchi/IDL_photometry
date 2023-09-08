@@ -345,12 +345,12 @@ if not now2band then begin
  oplot,[w2syma,w2syma]/60.,[yr0,w2symag],linesty=2,color=cs[b1],thick=4
 endif
 
-; if not now3band then begin
-;  oploterror, [a/60.],[w3tot_mag],[w3tot_mag_e*0],[w3tot_mag_e],$
-;   color=cs[b2],errcolor=cs[b2],psym=-sym(1, psize = psize), /nohat
-;  oplot,!x.crange,[w3symag,w3symag],linesty=1,color=cs[b2]
-;  oplot,[w3syma,w3syma]/60.,[yr0,w3symag],linesty=2,color=cs[b2],thick=4
-; endif
+if not now3band then begin
+ oploterror, [a/60.],[w3tot_mag],[w3tot_mag_e*0],[w3tot_mag_e],$
+  color=cs[b2],errcolor=cs[b2],psym=-sym(1, psize = psize), /nohat
+ oplot,!x.crange,[w3symag,w3symag],linesty=1,color=cs[b2]
+ oplot,[w3syma,w3syma]/60.,[yr0,w3symag],linesty=2,color=cs[b2],thick=4
+endif
 
 ; if not now4band then begin
 ;  oploterror, [a/60.],[w4tot_mag],[w4tot_mag_e*0],[w4tot_mag_e],$
@@ -383,11 +383,11 @@ if not now2band then begin
  oplot,[0.08,1.e9],[w2symag,w2symag],linesty=1,color=cs[b1]
 endif
 
-; if not now3band then begin
-;  oploterror, [a/60.],[w3tot_mag],[w3tot_mag_e*0],[w3tot_mag_e],$
-;   color=cs[b2],errcolor=cs[b2],psym=-sym(1, psize = psize), /nohat
-;  oplot,[0.08,1.e9],[w3symag,w3symag],linesty=1,color=cs[b2]
-; endif
+if not now3band then begin
+ oploterror, [a/60.],[w3tot_mag],[w3tot_mag_e*0],[w3tot_mag_e],$
+  color=cs[b2],errcolor=cs[b2],psym=-sym(1, psize = psize), /nohat
+ oplot,[0.08,1.e9],[w3symag,w3symag],linesty=1,color=cs[b2]
+endif
 
 ; if not now4band then begin
 ;  oploterror, [a/60.],[w4tot_mag],[w4tot_mag_e*0],[w4tot_mag_e],$
@@ -432,9 +432,9 @@ if not now2band then $
  oploterror, [a/60.],[w2ann_mu],[w2ann_mu_e*0],[w2ann_mu_e],$
   color=cs[b1],errcolor=cs[b1],psym=-sym(1, psize = psize), /nohat
 
-; if not now3band then $
-;  oploterror, [a/60.],[w3ann_mu],[w3ann_mu_e*0],[w3ann_mu_e],$
-;   color=cs[b2],errcolor=cs[b2],psym=-sym(1, psize = psize), /nohat
+if not now3band then $
+ oploterror, [a/60.],[w3ann_mu],[w3ann_mu_e*0],[w3ann_mu_e],$
+  color=cs[b2],errcolor=cs[b2],psym=-sym(1, psize = psize), /nohat
 
 ; if not now4band then $
 ;  oploterror, [a/60.],[w4ann_mu],[w4ann_mu_e*0],[w4ann_mu_e],$
@@ -462,9 +462,9 @@ if not now2band then $
  oploterror, [a/60.],[w2ann_mu],[w2ann_mu_e*0],[w2ann_mu_e],$
   color=cs[b1],errcolor=cs[b1],psym=-sym(1, psize = psize), /nohat
 
-; if not now3band then $
-;  oploterror, [a/60.],[w3ann_mu],[w3ann_mu_e*0],[w3ann_mu_e],$
-;   color=cs[b2],errcolor=cs[b2],psym=-sym(1, psize = psize), /nohat
+if not now3band then $
+ oploterror, [a/60.],[w3ann_mu],[w3ann_mu_e*0],[w3ann_mu_e],$
+  color=cs[b2],errcolor=cs[b2],psym=-sym(1, psize = psize), /nohat
 
 ; if not now4band then $
 ;  oploterror, [a/60.],[w4ann_mu],[w4ann_mu_e*0],[w4ann_mu_e],$

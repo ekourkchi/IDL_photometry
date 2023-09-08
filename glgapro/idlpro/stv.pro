@@ -4562,8 +4562,8 @@ IF n_params() LT 1  THEN BEGIN
 ENDIF 
 
 IF NOT keyword_set(cursor) THEN cursor = 24
-IF NOT keyword_set(width) THEN width = 600
-IF NOT keyword_set(height) THEN height = 600
+IF NOT keyword_set(width) THEN width = 2000 ; 600
+IF NOT keyword_set(height) THEN height = 800 ; 600
 
 cfile = '/dev/tty'
 IF keyword_set(cvfile) THEN cfile = cvfile
@@ -4714,13 +4714,13 @@ ENDIF ELSE BEGIN ; otherwise create widget
  
  ;---------------------------------------------------------------
 ; Create a base
-
+device,get_screen_size=screen_size
  ; This generates the main window
  
  db_info = strmid(auxbase,0,strpos(auxbase,'/aux'))
  
  baseID = WIDGET_BASE( COLUMN=2, $
-       MBAR=wMBarBase, xoffset = 760, yoffset = 0, title='Obj: ' + object+'  -->  '+'Data-Base: '+db_info)
+       MBAR=wMBarBase, xoffset = 760, yoffset = 0, title='Obj: ' + object+'  -->  '+'Data-Base: '+db_info, /SCROLL, SCR_XSIZE=screen_size[0]*0.95, SCR_YSIZE=screen_size[1]*0.85)
 
  wFileMenu = Widget_Button( wMBarBase, VALUE='File', /MENU)
  wMeasure = Widget_Button( wFileMenu, VALUE='Measure >', UVALUE='measure')
@@ -4962,7 +4962,7 @@ wLRow1 = widget_base(wLRow, COLUMN=2, /frame, uname='wLRow1_widg')
 ; stop
  ; This is where the galaxy image is displayed
  draw = widget_draw(base, xsize=imx, ysize=imy, /scroll,/no_copy, $
-          x_scroll_size=width < imx, y_scroll_size= height < imy, $
+          x_scroll_size=imx, y_scroll_size= height < imy, $
 	  /button_events) 
 
  keyboard_text_id = widget_text(base, $

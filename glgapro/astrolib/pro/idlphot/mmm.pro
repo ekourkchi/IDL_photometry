@@ -108,7 +108,11 @@ pro mmm, sky_vector, skymod, sigma , skew, HIGHBAD = highbad, DEBUG = debug, $
               ;Maximum number of iterations allowed
  if N_elements(mxiter) EQ 0 then mxiter = 50
  if N_elements(minsky) Eq 0 then minsky = 20   ;Minimum number of legal sky elements
- nsky = N_elements( sky_vector )            ;Get number of sky elements 
+
+
+ sky_vector2 = sky_vector[WHERE(~FINITE(sky_vector, /NAN))]
+
+ nsky = N_elements( sky_vector2 )            ;Get number of sky elements 
  
   if nsky LT minsky then begin
       sigma=-1.0 &  skew = 0.0
@@ -120,11 +124,12 @@ pro mmm, sky_vector, skymod, sigma , skew, HIGHBAD = highbad, DEBUG = debug, $
  nlast = nsky-1                        ;Subscript of last pixel in SKY array
  if keyword_set(DEBUG) then $
      message,'Processing '+strtrim(nsky,2) + ' element array',/INF
- sz_sky = size(sky_vector,/structure)
+ sz_sky = size(sky_vector2,/structure)
  integer = keyword_set(discrete)
  if ~integer then integer = (sz_sky.type LT 4) or (sz_sky.type GT 11) 
- sky = sky_vector[ sort( sky_vector ) ]    ;Sort SKY in ascending values
 
+ sky = sky_vector2[ sort( sky_vector2 ) ]    ;Sort SKY in ascending values
+; 
  skymid = 0.5*sky[(nsky-1)/2] + 0.5*sky[nsky/2] ;Median value of all sky values  
        
  cut1 = min( [skymid-sky[0],sky[nsky-1] - skymid] ) 
